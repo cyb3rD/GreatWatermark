@@ -1,0 +1,11 @@
+{
+  "name": "GreatWatermark",
+  "version": "1.0.1",
+  "devDependencies": {
+    "browser-sync": "^2.9.7",
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1"
+  }
+}
