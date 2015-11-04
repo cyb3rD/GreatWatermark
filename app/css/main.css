@@ -518,18 +518,18 @@ body {
   position: relative;
   min-height: 100%;
   min-width: 1130px;
-  /* ╨╛╨│╤А╨░╨╜╨╕╤З╨╡╨╜╨╕╨╡ ╤И╨╕╤А╨╕╨╜╤Л ╤Н╨║╤А╨░╨╜╨░*/
+  /* ограничение ширины экрана*/
   height: auto !important;
 }
 
-/* ╨Я╤А╨╕╨▒╤К╨╡╨╝ ╤Д╤Г╤В╨╡╤А ╨║ ╨╜╨╕╨╖╤Г*/
+/* Прибъем футер к низу*/
 .wrapper:after {
   content: "";
   height: 220px;
   display: block;
 }
 
-/* ╨Ю╨▒╤Й╨╕╨╡ ╨║╨╗╨░╤Б╤Б╤Л */
+/* Общие классы */
 .container {
   width: 1100px;
   margin: 0 auto;
@@ -665,13 +665,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Firefox */
+  /* Для Firefox */
   -ms-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П IE */
+  /* Для IE */
   -webkit-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
+  /* Для Safari, Chrome, iOS */
   -o-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Opera */
+  /* Для Opera */
   transform: rotate(-45deg);
 }
 
@@ -795,7 +795,6 @@ p {
   display: inline-block;
   clear: both;
   margin-left: 20px;
-  margin-top: -17px;
   text-align: right;
 }
 
@@ -870,13 +869,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(135deg);
-  /* ╨Ф╨╗╤П Firefox */
+  /* Для Firefox */
   -ms-transform: rotate(135deg);
-  /* ╨Ф╨╗╤П IE */
+  /* Для IE */
   -webkit-transform: rotate(135deg);
-  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
+  /* Для Safari, Chrome, iOS */
   -o-transform: rotate(135deg);
-  /* ╨Ф╨╗╤П Opera */
+  /* Для Opera */
   transform: rotate(135deg);
   cursor: pointer;
 }
@@ -902,13 +901,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Firefox */
+  /* Для Firefox */
   -ms-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П IE */
+  /* Для IE */
   -webkit-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
+  /* Для Safari, Chrome, iOS */
   -o-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Opera */
+  /* Для Opera */
   transform: rotate(-45deg);
   cursor: pointer;
 }
