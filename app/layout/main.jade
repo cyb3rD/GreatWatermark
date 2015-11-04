@@ -24,7 +24,72 @@ html(lang="Ru-ru")
         <p class="browsehappy">Вы используете <strong>устаревший</strong>браузер.Пожалуйста,
         <a href="http://browsehappy.com">обновите</a> его.</p>
         <![endif]-->
-        .wrapper
+        .wrap
+            .wrap__inner
+
+                .wrap__inner__left
+                    h1.title__name
+                        | Генератор водяных знаков
+                    canvas#canvas.canvas__block
+
+                .wrap__inner__right
+                    .control__block
+                        .control__title
+                            | Настройки
+                        .control__input-img
+                            .control__form__parent-img
+                                form.parent-img(action="")
+                                    label
+                                        .form__parent__title Исходное изображение
+                                        input(type="text" class="form__parent__input_text" placeholder="загрузите изображение")
+                                        input(type="file" class="form__parent__input_file")
+                                    button.form__parent__input_button input
+                            .control__form__child-img
+                                form.parent-img(action="")
+                                    label
+                                        .form__child__title Водяной знак
+                                        input(type="text" class="form__child__input_text" placeholder="загрузите изображение")
+                                        input(type="file" class="form__child__input_file")
+                                    button.form__child__input_button input
+
+                        .control__position-img.clearfix
+                            .control__position__title Положение
+                            .control__position__grid.clearfix
+                                - var items = ['1','2','3','4','5','6','7','8','9']
+                                each item in items
+                                    div(class="position__grid_item" + ((item == '1') ? ' active' : '' ) id=+item)
+                                        //a(href="" + item)=item
+                            .control__position__controls
+                                ul.position__control_ul
+                                    li.position__control_li
+                                        .position__text-x X
+                                        .position__control_x
+                                            .position__control_x_text 10
+                                        .position__control__x_point
+                                            .position__control__x_point-top
+                                            .position__control__x_point-bottom
+                                    li.position__control_li
+                                        .position__text-y Y
+                                        .position__control_y
+                                            .position__control_y_text 10
+                                        .position__control__y_point
+                                            .position__control__y_point-top
+                                            .position__control__y_point-bottom
+
+                        .control__opacity.clearfix
+                            .opacity__controller
+                                .opacity__title Прозрачность
+                                input.opacity__controller_input(type="range")
+
+                        .control__button.clearfix
+                            .control__button_reset
+                                button.button_reset Сброс
+                            .control__button_download
+                                button.button_download Скачать
+            footer.footer
+                | © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+
+            .extra-block
 
 
         script(type="text/javascript" src="bower/jquery/jquery.min.js")

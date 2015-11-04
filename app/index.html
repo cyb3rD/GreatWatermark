@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="Ru-ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Greatwatermark service">
+		<meta name="keywords" content="watermark, create, download, quick, easy">
+		<meta name="author" content="LoftSchool Team #1">
+		<title>GreatWatermark service</title>
+		<!-- Bower CSS-->
+		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+		<!-- Dev CSS-->
+		<link rel="stylesheet" href="css/main.css">
+		<!-- Fonts & favicon-->
+		<link rel="icon" type="image/png" href="img/favicon.png">
+		<!-- build:js js/modernizr.min.js-->
+		<script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
+		<!-- endbuild-->
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+		<p class="browsehappy">Вы используете <strong>устаревший</strong>браузер.Пожалуйста,
+		<a href="http://browsehappy.com">обновите</a> его.</p>
+		<![endif]-->
+		<div class="wrap">
+			<div class="wrap__inner">
+				<div class="wrap__inner__left">
+					<h1 class="title__name">Генератор водяных знаков</h1>
+					<canvas id="canvas" class="canvas__block"></canvas>
+				</div>
+				<div class="wrap__inner__right">
+					<div class="control__block">
+						<div class="control__title">Настройки</div>
+						<div class="control__input-img">
+							<div class="control__form__parent-img">
+								<form action="" class="parent-img">
+									<label>
+										<div class="form__parent__title">Исходное изображение</div>
+										<input type="text" placeholder="загрузите изображение" class="form__parent__input_text">
+										<input type="file" class="form__parent__input_file">
+									</label>
+									<button class="form__parent__input_button">input</button>
+								</form>
+							</div>
+							<div class="control__form__child-img">
+								<form action="" class="parent-img">
+									<label>
+										<div class="form__child__title">Водяной знак</div>
+										<input type="text" placeholder="загрузите изображение" class="form__child__input_text">
+										<input type="file" class="form__child__input_file">
+									</label>
+									<button class="form__child__input_button">input</button>
+								</form>
+							</div>
+						</div>
+						<div class="control__position-img clearfix">
+							<div class="control__position__title">Положение</div>
+							<div class="control__position__grid clearfix">
+								<div id="1" class="position__grid_item active">
+									<!--a(href="" + item)=item-->
+								</div>
+								<div id="2" class="position__grid_item">
+									<!--a(href="" + item)=item-->
+								</div>
+								<div id="3" class="position__grid_item">
+									<!--a(href="" + item)=item-->
+								</div>
+								<div id="4" class="position__grid_item">
+									<!--a(href="" + item)=item-->
+								</div>
+								<div id="5" class="position__grid_item">
+									<!--a(href="" + item)=item-->
+								</div>
+								<div id="6" class="position__grid_item">
+									<!--a(href="" + item)=item-->
+								</div>
+								<div id="7" class="position__grid_item">
+									<!--a(href="" + item)=item-->
+								</div>
+								<div id="8" class="position__grid_item">
+									<!--a(href="" + item)=item-->
+								</div>
+								<div id="9" class="position__grid_item">
+									<!--a(href="" + item)=item-->
+								</div>
+							</div>
+							<div class="control__position__controls">
+								<ul class="position__control_ul">
+									<li class="position__control_li">
+										<div class="position__text-x">X</div>
+										<div class="position__control_x">
+											<div class="position__control_x_text">10</div>
+										</div>
+										<div class="position__control__x_point">
+											<div class="position__control__x_point-top"></div>
+											<div class="position__control__x_point-bottom"></div>
+										</div>
+									</li>
+									<li class="position__control_li">
+										<div class="position__text-y">Y</div>
+										<div class="position__control_y">
+											<div class="position__control_y_text">10</div>
+										</div>
+										<div class="position__control__y_point">
+											<div class="position__control__y_point-top"></div>
+											<div class="position__control__y_point-bottom"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="control__opacity clearfix">
+							<div class="opacity__controller">
+								<div class="opacity__title">Прозрачность</div>
+								<input type="range" class="opacity__controller_input">
+							</div>
+						</div>
+						<div class="control__button clearfix">
+							<div class="control__button_reset">
+								<button class="button_reset">Сброс</button>
+							</div>
+							<div class="control__button_download">
+								<button class="button_download">Скачать</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</footer>
+			<div class="extra-block"></div>
+		</div>
+		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
