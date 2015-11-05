@@ -7,10 +7,11 @@ var changePlace = (function () {
 	// Устанавливаем прослушку
 	
 	var _setUpListneres = function () {
-		$('.position__control__x_point-top').on('click', _increaseX); // При клику верх (по X)
-		$('.position__control__x_point-bottom').on('click', _lowerX); // При клику вниз (по X)
-		$('.position__control__y_point-top').on('click', _increaseY); // При клику верх (по Y)
-		$('.position__control__y_point-bottom').on('click', _lowerY); // При клику вниз (по Y)
+		$('.position__control__x_point-top').on('click', _increaseX); // При клике верх (по X)
+		$('.position__control__x_point-bottom').on('click', _lowerX); // При клике вниз (по X)
+		$('.position__control__y_point-top').on('click', _increaseY); // При клике верх (по Y)
+		$('.position__control__y_point-bottom').on('click', _lowerY); // При клике вниз (по Y)
+		$('.position__grid_item').on('click', _placeImg); // При клике радио #1 
 		
 	};
 
@@ -65,6 +66,51 @@ var changePlace = (function () {
 			img.css("top", cY + "px");
 		};
 	};
+
+	// При клике радио #1 отправляю вотермарк в левый верхний угол
+	var _placeImg = function(e) {
+		e.preventDefault();
+		var img = $('.canvas__img'),
+			boxTextX = $('.position__control_x_text'),
+			boxTextY = $('.position__control_y_text'),
+			$this = $(this);
+		$(".position__grid_item").removeClass('active');
+		$this.addClass('active');
+		switch ($this.attr('id')) {
+			case '1':
+				img.css('top', 0).css('left',0);
+				break
+			case '2': 
+				img.css('top', 0).css('left', $('.canvas__block').width() / 2 - img.width() / 2 );
+				break
+			case '3': 
+				img.css('top', 0).css('left', $('.canvas__block').width() - img.width());
+				break
+			case '4':
+				img.css('top', $('.canvas__block').height() / 2 - img.height() / 2).css('left',0);
+				break
+			case '5': 
+				img.css('top', $('.canvas__block').height() / 2 - img.height() / 2).css('left', $('.canvas__block').width() / 2 - img.width() / 2 );
+				break
+			case '6': 
+				img.css('top', $('.canvas__block').height() / 2 - img.height() / 2).css('left', $('.canvas__block').width() - img.width());
+				break
+			case '7':
+				img.css('top', $('.canvas__block').height() - img.height()).css('left',0);
+				break
+			case '8': 
+				img.css('top', $('.canvas__block').height() - img.height()).css('left', $('.canvas__block').width() / 2 - img.width() / 2 );
+				break
+			case '9': 
+				img.css('top', $('.canvas__block').height() - img.height()).css('left', $('.canvas__block').width() - img.width());
+				break
+		}	
+		boxTextX.text(img.position().left);
+		boxTextY.text(img.position().top);
+	}
+	
+	
+
 	return {
 		init: init
 	};

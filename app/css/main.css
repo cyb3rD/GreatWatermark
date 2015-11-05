@@ -1,9 +1,3 @@
-.canvas__img {
-  max-width: 200px;
-  max-height: 200px;
-  position:absolute;
-}
-
 @charset "UTF-8";
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -576,6 +570,12 @@ p {
   color: #2e3641;
 }
 
+.canvas__img {
+  max-width: 200px;
+  max-height: 200px;
+  position: absolute;
+}
+
 .wrap {
   position: fixed;
   top: 0;
@@ -619,7 +619,7 @@ p {
   width: 650px;
   height: 535px;
   background: #fff;
-  margin-top:40px;
+  margin-top: 50px;
 }
 
 .title__name {
