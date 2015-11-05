@@ -7,13 +7,13 @@ var gulp = require("gulp"),
 // paths & settings
 var paths = {
 	browserSync : {
-		serverPort 	: 9000,
+		serverPort 	: 3000,
 		baseDir 	: 'app',
-		watchPaths 	: ['*.html', 'css/*.css', 'js/*.js']
+		watchPaths 	: ['*.html', 'css/*.css', 'js/*.js', 'php/*.php']
 	},
 
 	watchDirs : {
-		watchPaths	: ['app/*.html', 'app/js/**/*.js', 'app/css/**/*.css']
+		watchPaths	: ['app/*.html', 'app/js/**/*.js', 'app/css/**/*.css', 'app/php/**/*.php']
 	},
 
 	scss : {
@@ -51,9 +51,7 @@ gulp.task('server', function () {
 		port : paths.browserSync.serverPort,
 		// Tunnel for access from remote PC
 		// tunnel: 'samplestore',
-		server: {
-			baseDir: paths.browserSync.baseDir
-		}
+		proxy : 'watermark/app'
 	});
 });
 

@@ -1,4 +1,6 @@
 .idea
 .sass-cache
+/app/php/plugins
 node_modules
 app/bower
+/vendor/

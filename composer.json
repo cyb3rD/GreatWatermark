@@ -1,0 +1,15 @@
+{
+    "name": "team/watermark",
+    "authors": [
+        {
+            "name": "Maraev Sergey",
+            "email": "maraev@list.ru"
+        }
+    ],
+    "config": {
+        "vendor-dir": "app/php/plugins"
+    },
+    "require": {
+        "twig/twig": "1.9.2"
+    }
+}
