@@ -17,6 +17,12 @@
   width: 100%;
   height: 100%;
   background: #cfa990;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 .wrap__inner {
   position: absolute;
@@ -147,7 +153,6 @@
   outline:none;
   text-align: center;
   vertical-align: middle;
-  //background-image:url("img/download.png");
 }
 .form__parent__input_file {
   display: none;
