@@ -7,10 +7,11 @@ var changePlace = (function () {
 	// Устанавливаем прослушку
 	
 	var _setUpListneres = function () {
-		$('.position__control__x_point-top').on('click', _increaseX); // При клике верх (по X)
-		$('.position__control__x_point-bottom').on('click', _lowerX); // При клике вниз (по X)
-		$('.position__control__y_point-top').on('click', _increaseY); // При клике верх (по Y)
-		$('.position__control__y_point-bottom').on('click', _lowerY); // При клике вниз (по Y)
+		$('.position__control__x_point-top').on('click', _increaseX); // При клику верх (по X)
+		$('.position__control__x_point-bottom').on('click', _lowerX); // При клику вниз (по X)
+		$('.position__control__y_point-top').on('click', _increaseY); // При клику верх (по Y)
+		$('.position__control__y_point-bottom').on('click', _lowerY); // При клику вниз (по Y)
+		
 	};
 
 	// При клике верх по X меняем значение в боксе, смещаем картинку по X вправо 
