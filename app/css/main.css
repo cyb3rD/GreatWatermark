@@ -829,9 +829,22 @@ p {
   min-width: 30px;
   height: 30px;
   margin: auto;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 26px;
   text-align: center;
+}
+.position__control_x_text input,
+.position__control_y_text input {
+  width: 38px;
+  height: 38px;
+  top: -7px;
+  position: absolute;
+  left: 0px;
+  background: #f1f1f5;
+  border: 0;
+  padding: 3px;
+  text-align: center;
+  outline: 0;
 }
 
 .position__text-x,

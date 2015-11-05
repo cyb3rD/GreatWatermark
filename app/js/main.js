@@ -22,6 +22,8 @@ $(document).ready(function(){
     $("#sliderAmount").val('49');
     $("#slider-opacity div").css({'width':'49%'});
     $("#slider-opacity span").css({'left':'49%'});
+    $("#value__x_point").val('0');
+    $("#value__y_point").val('0');
   });
 
 });
