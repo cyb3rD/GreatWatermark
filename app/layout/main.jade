@@ -18,6 +18,9 @@ html(lang="Ru-ru")
         // build:js js/modernizr.min.js
         script(type="text/javascript" src="bower/modernizr/modernizr.js")
         // endbuild
+        // Подключаем стили CSS для библиотеки Jquery UI
+        link(href='bower/jquery-ui/themes/base/jquery-ui.css', rel='stylesheet', type='text/css')
+
 
     body
         <!--[if lt IE 7]>
@@ -38,14 +41,14 @@ html(lang="Ru-ru")
                             | Настройки
                         .control__input-img
                             .control__form__parent-img
-                                form.parent-img(action="")
+                                form.parent-img#parent-img(action="")
                                     label
                                         .form__parent__title Исходное изображение
                                         input(type="text" class="form__parent__input_text" placeholder="загрузите изображение")
                                         input(type="file" class="form__parent__input_file")
                                     button.form__parent__input_button input
                             .control__form__child-img
-                                form.parent-img(action="")
+                                form.child-img#child-img(action="")
                                     label
                                         .form__child__title Водяной знак
                                         input(type="text" class="form__child__input_text" placeholder="загрузите изображение")
@@ -79,11 +82,12 @@ html(lang="Ru-ru")
                         .control__opacity.clearfix
                             .opacity__controller
                                 .opacity__title Прозрачность
-                                input.opacity__controller_input(type="range")
-
+                                input(type="text" id="sliderAmount" readonly style="")
+                                #slider-opacity
+                                
                         .control__button.clearfix
                             .control__button_reset
-                                button.button_reset Сброс
+                                button(id="reset").button_reset Сброс
                             .control__button_download
                                 button.button_download Скачать
             footer.footer
@@ -93,4 +97,5 @@ html(lang="Ru-ru")
 
 
         script(type="text/javascript" src="bower/jquery/jquery.min.js")
+        script(type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js")
         script(type="text/javascript" src="js/main.js")

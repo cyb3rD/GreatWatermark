@@ -17,6 +17,8 @@
 		<!-- build:js js/modernizr.min.js-->
 		<script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
 		<!-- endbuild-->
+		<!-- Подключаем стили CSS для библиотеки Jquery UI-->
+		<link href="bower/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -34,7 +36,7 @@
 						<div class="control__title">Настройки</div>
 						<div class="control__input-img">
 							<div class="control__form__parent-img">
-								<form action="" class="parent-img">
+								<form id="parent-img" action="" class="parent-img">
 									<label>
 										<div class="form__parent__title">Исходное изображение</div>
 										<input type="text" placeholder="загрузите изображение" class="form__parent__input_text">
@@ -44,7 +46,7 @@
 								</form>
 							</div>
 							<div class="control__form__child-img">
-								<form action="" class="parent-img">
+								<form id="child-img" action="" class="child-img">
 									<label>
 										<div class="form__child__title">Водяной знак</div>
 										<input type="text" placeholder="загрузите изображение" class="form__child__input_text">
@@ -113,12 +115,13 @@
 						<div class="control__opacity clearfix">
 							<div class="opacity__controller">
 								<div class="opacity__title">Прозрачность</div>
-								<input type="range" class="opacity__controller_input">
+								<input type="text" id="sliderAmount" readonly style="">
+								<div id="slider-opacity"></div>
 							</div>
 						</div>
 						<div class="control__button clearfix">
 							<div class="control__button_reset">
-								<button class="button_reset">Сброс</button>
+								<button id="reset" class="button_reset">Сброс</button>
 							</div>
 							<div class="control__button_download">
 								<button class="button_download">Скачать</button>
@@ -131,6 +134,7 @@
 			<div class="extra-block"></div>
 		</div>
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
