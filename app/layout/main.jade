@@ -30,7 +30,8 @@ html(lang="Ru-ru")
                 .wrap__inner__left
                     h1.title__name
                         | Генератор водяных знаков
-                    canvas#canvas.canvas__block
+                    .canvas__block#canvas
+                        img(src="../img/1.jpg").canvas__img
 
                 .wrap__inner__right
                     .control__block
@@ -64,14 +65,14 @@ html(lang="Ru-ru")
                                     li.position__control_li
                                         .position__text-x X
                                         .position__control_x
-                                            .position__control_x_text 10
+                                            .position__control_x_text 0
                                         .position__control__x_point
                                             .position__control__x_point-top
                                             .position__control__x_point-bottom
                                     li.position__control_li
                                         .position__text-y Y
                                         .position__control_y
-                                            .position__control_y_text 10
+                                            .position__control_y_text 0
                                         .position__control__y_point
                                             .position__control__y_point-top
                                             .position__control__y_point-bottom
@@ -94,3 +95,4 @@ html(lang="Ru-ru")
 
         script(type="text/javascript" src="bower/jquery/jquery.min.js")
         script(type="text/javascript" src="js/main.js")
+        script(type="text/javascript" src="js/place.js")
