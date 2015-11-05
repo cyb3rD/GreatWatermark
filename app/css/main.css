@@ -709,11 +709,12 @@ p {
   width: 39px;
   height: 27px;
   font-style: 0;
-  padding-bottom: 4px;
   background: #f97e76;
   border: 0;
   border-radius: 0 5px 5px 0;
   outline: none;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .form__parent__input_file {
@@ -736,11 +737,12 @@ p {
   width: 39px;
   height: 27px;
   font-style: 0;
-  padding-bottom: 4px;
   background: #f97e76;
   border: 0;
   border-radius: 0 5px 5px 0;
   outline: none;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .form__child__input_file {
