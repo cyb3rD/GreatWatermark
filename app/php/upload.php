@@ -1,11 +1,12 @@
 <?php
+use WideImage\WideImage;
 
 session_start();
 
-if($_SERVER['REQUEST_METHOD' === "POST"]){
+require_once 'plugins/autoload.php';
 
-    require_once 'plugins/autoload.php';
-
+if(true){
+    echo "post";
     function rus2translit($string) {
         $converter = array(
             'а' => 'a',   'б' => 'b',   'в' => 'v',
@@ -35,6 +36,7 @@ if($_SERVER['REQUEST_METHOD' === "POST"]){
     }
 
     $inputName = key($_FILES);
+    var_dump($inputName);
     $file = $_FILES[$inputName];
 
     if($file['size'] === 0 || $file['size'] > 2097152){
@@ -48,6 +50,7 @@ if($_SERVER['REQUEST_METHOD' === "POST"]){
     $destination = '../images/upload'. $uploadFileName;
     $imageSizes = getimagesize($uploadFile);
 
+
     WideImage::loadFromFile($uploadFile)->saveToFile($destination);
 
     $data = [
@@ -59,10 +62,10 @@ if($_SERVER['REQUEST_METHOD' === "POST"]){
     ];
 
     echo json_encode($data);
-//echo $data;
     exit;
 } else {
     $_SESSION['message'] = 'У Вас нет доступа на данную страницу';
-    header('Location: /../app/index.html');
+    print_r($_SERVER['REQUEST_METHOD']);
+    echo "error";
     exit;
 }

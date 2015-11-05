@@ -10,6 +10,7 @@
         "vendor-dir": "app/php/plugins"
     },
     "require": {
-        "twig/twig": "1.9.2"
+        "twig/twig": "1.9.*",
+        "smottt/wideimage": "1.1.*"
     }
 }
