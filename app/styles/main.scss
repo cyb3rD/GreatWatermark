@@ -10,12 +10,6 @@
   font-family: sans-serif;
   color: #2e3641;
 }
-.canvas__img {
-  max-width: 200px;
-  max-height: 200px;
-  position:absolute;
-}
-
 .wrap {
   position: fixed;
   top: 0;
@@ -62,11 +56,11 @@
 /* Left block */
 
 .canvas__block {
-  position: relative;
+  position: absolute;
   width: 650px;
   height: 535px;
   background: #fff;
-  margin-top:50px;
+  bottom: 25px;
 }
 .title__name {
   margin: 0;
