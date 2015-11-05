@@ -18,9 +18,6 @@ html(lang="Ru-ru")
         // build:js js/modernizr.min.js
         script(type="text/javascript" src="bower/modernizr/modernizr.js")
         // endbuild
-        // Подключаем стили CSS для библиотеки Jquery UI
-        link(href='bower/jquery-ui/themes/base/jquery-ui.css', rel='stylesheet', type='text/css')
-
 
     body
         <!--[if lt IE 7]>
@@ -33,7 +30,8 @@ html(lang="Ru-ru")
                 .wrap__inner__left
                     h1.title__name
                         | Генератор водяных знаков
-                    canvas#canvas.canvas__block
+                    .canvas__block#canvas
+                        img(src="/img/1.jpg").canvas__img
 
                 .wrap__inner__right
                     .control__block
@@ -41,21 +39,21 @@ html(lang="Ru-ru")
                             | Настройки
                         .control__input-img
                             .control__form__parent-img
-                                form.parent-img#parent-img(action="")
+                                form.parent-img(action="")
                                     label
                                         .form__parent__title Исходное изображение
                                         input(type="text" class="form__parent__input_text" placeholder="загрузите изображение")
                                         input(type="file" class="form__parent__input_file")
-                                    button.form__parent__input_button
-                                      img(src="img/download.png")
+                                      button.form__parent__input_button
+                                        img(src="img/download.png")
                             .control__form__child-img
-                                form.child-img#child-img(action="")
+                                form.parent-img(action="")
                                     label
                                         .form__child__title Водяной знак
                                         input(type="text" class="form__child__input_text" placeholder="загрузите изображение")
                                         input(type="file" class="form__child__input_file")
-                                    button.form__child__input_button
-                                      img(src="img/download.png")
+                                      button.form__child__input_button
+                                        img(src="img/download.png")
 
                         .control__position-img.clearfix
                             .control__position__title Положение
@@ -69,7 +67,7 @@ html(lang="Ru-ru")
                                     li.position__control_li
                                         .position__text-x X
                                         .position__control_x
-                                            .position__control_x_text 
+                                            .position__control_x_text
                                               input(type="text" id="value__x_point" value="100")
                                         .position__control__x_point
                                             .position__control__x_point-top
@@ -88,7 +86,7 @@ html(lang="Ru-ru")
                                 .opacity__title Прозрачность
                                 input(type="text" id="sliderAmount" readonly style="")
                                 #slider-opacity
-                                
+
                         .control__button.clearfix
                             .control__button_reset
                                 button(id="reset").button_reset Сброс
@@ -101,5 +99,5 @@ html(lang="Ru-ru")
 
 
         script(type="text/javascript" src="bower/jquery/jquery.min.js")
-        script(type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js")
         script(type="text/javascript" src="js/main.js")
+        script(type="text/javascript" src="js/place.js")

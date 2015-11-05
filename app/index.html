@@ -17,8 +17,6 @@
 		<!-- build:js js/modernizr.min.js-->
 		<script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
 		<!-- endbuild-->
-		<!-- Подключаем стили CSS для библиотеки Jquery UI-->
-		<link href="bower/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -29,14 +27,14 @@
 			<div class="wrap__inner">
 				<div class="wrap__inner__left">
 					<h1 class="title__name">Генератор водяных знаков</h1>
-					<canvas id="canvas" class="canvas__block"></canvas>
+					<div id="canvas" class="canvas__block"><img src="/img/1.jpg" class="canvas__img"></div>
 				</div>
 				<div class="wrap__inner__right">
 					<div class="control__block">
 						<div class="control__title">Настройки</div>
 						<div class="control__input-img">
 							<div class="control__form__parent-img">
-								<form id="parent-img" action="" class="parent-img">
+								<form action="" class="parent-img">
 									<label>
 										<div class="form__parent__title">Исходное изображение</div>
 										<input type="text" placeholder="загрузите изображение" class="form__parent__input_text">
@@ -46,7 +44,7 @@
 								</form>
 							</div>
 							<div class="control__form__child-img">
-								<form id="child-img" action="" class="child-img">
+								<form action="" class="parent-img">
 									<label>
 										<div class="form__child__title">Водяной знак</div>
 										<input type="text" placeholder="загрузите изображение" class="form__child__input_text">
@@ -92,7 +90,7 @@
 									<li class="position__control_li">
 										<div class="position__text-x">X</div>
 										<div class="position__control_x">
-											<div class="position__control_x_text"> 
+											<div class="position__control_x_text">
 												<input type="text" id="value__x_point" value="100">
 											</div>
 										</div>
@@ -138,7 +136,7 @@
 			<div class="extra-block"></div>
 		</div>
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/place.js"></script>
 	</body>
 </html>
