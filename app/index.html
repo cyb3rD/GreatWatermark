@@ -37,22 +37,22 @@
 						<div class="control__input-img">
 							<div class="control__form__parent-img">
 								<form id="parent-img" action="" class="parent-img">
-									<label>
-										<div class="form__parent__title">Исходное изображение</div>
-										<input type="text" placeholder="загрузите изображение" class="form__parent__input_text">
-										<input type="file" class="form__parent__input_file">
-									</label>
-									<button class="form__parent__input_button"><img src="img/download.png"></button>
-								</form>
-							</div>
-							<div class="control__form__child-img">
-								<form id="child-img" action="" class="child-img">
-									<label>
-										<div class="form__child__title">Водяной знак</div>
-										<input type="text" placeholder="загрузите изображение" class="form__child__input_text">
-										<input type="file" class="form__child__input_file">
-									</label>
-									<button class="form__child__input_button"><img src="img/download.png"></button>
+									<div id="uploadfile" class="fileupload-wrapper">
+										<p class="new-project-form-upload-name">Исходное изображение</p>
+										<label class="fileupload-label">
+											<input id="main_img" type="file" name="files[]" class="fileupload">
+											<input id="main_img_url" type="hidden" name="fileurl">
+										</label>
+										<input id="main_img_name" type="text" name="filename" placeholder="Загрузите изображение" disabled class="fileupload-input">
+									</div>
+									<div id="uploadfile" class="fileupload-wrapper">
+										<p class="new-project-form-upload-name">Водяной знак</p>
+										<label class="fileupload-label">
+											<input id="water_img" type="file" name="files[]" class="fileupload">
+											<input id="water_img_url" type="hidden" name="fileurl">
+										</label>
+										<input id="water_img_name" type="text" name="filename" placeholder="Загрузите изображение" disabled class="fileupload-input">
+									</div>
 								</form>
 							</div>
 						</div>
@@ -141,6 +141,7 @@
 		<script type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/place.js"></script>
 		<script type="text/javascript" src="js/opacity.js"></script>
+		<script type="text/javascript" src="js/upload.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
