@@ -24,6 +24,7 @@ $(document).ready(function(){
     $("#slider-opacity span").css({'left':'49%'});
     $("#value__x_point").val('0');
     $("#value__y_point").val('0');
+    changePlace.resetPos();
   });
 
 });
