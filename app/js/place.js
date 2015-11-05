@@ -4,6 +4,31 @@ var changePlace = (function () {
 		_setUpListneres();
 	};
 
+	// Восстанавливаем значения по умолчанию
+	restorePosDefault = function () {
+		var boxTextX = $('.position__control_x_text'),
+			boxTextY = $('.position__control_y_text'),
+			img = $('.canvas__img');
+		img.css('top',0).css('left',0);
+		boxTextX.text('0');
+		boxTextY.text('0');
+		$(".position__grid_item").removeClass('active');
+		$("#1").addClass('active');
+	};
+
+	checkPosition = function() {
+		var canvasHeight = $('.canvas__block').height(),
+			canvasWidth =  $('.canvas__block').width(),
+			imgHeight = img.height(),
+			imgWidth = img.width(),
+			cX = img.position().left,
+			cY = img.position().top;
+		//$(".position__grid_item").removeClass('active');
+		
+
+
+	}
+
 	// Устанавливаем прослушку
 	
 	var _setUpListneres = function () {
@@ -112,7 +137,8 @@ var changePlace = (function () {
 	
 
 	return {
-		init: init
+		init: init,
+		resetPos: restorePosDefault
 	};
 })();
 
