@@ -9,11 +9,11 @@ var paths = {
 	browserSync : {
 		serverPort 	: 9000,
 		baseDir 	: 'app',
-		watchPaths 	: ['*.html', 'css/*.css', 'js/*.js', 'php/*.php']
+		watchPaths 	: ['*.html', 'css/*.css', 'js/*.js']
 	},
 
 	watchDirs : {
-		watchPaths	: ['app/*.html', 'app/js/**/*.js', 'app/css/**/*.css', 'app/php/**/*.php']
+		watchPaths	: ['app/*.html', 'app/js/**/*.js', 'app/css/**/*.css']
 	},
 
 	scss : {
@@ -51,7 +51,9 @@ gulp.task('server', function () {
 		port : paths.browserSync.serverPort,
 		// Tunnel for access from remote PC
 		// tunnel: 'samplestore',
-		proxy: 'watermark/app'
+		server: {
+			baseDir: paths.browserSync.baseDir
+		}
 	});
 });
 

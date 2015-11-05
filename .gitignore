@@ -6,3 +6,4 @@ app/bower
 app/css
 app/index.html
 /vendor/
+gulpfile.js
