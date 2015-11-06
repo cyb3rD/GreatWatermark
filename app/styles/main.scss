@@ -190,6 +190,13 @@
 
 .control__position-img {
   position: relative;
+  /* Убираем выделение. Возникает при частых нажатияж на стрелки.*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .control__title {
   margin: 0;
@@ -456,6 +463,7 @@
 .button_download{
   background: #f17a73;
   outline:none;
+  width: 100px;
   &:hover{
     background: #f85045;
     outline:none;
@@ -469,6 +477,7 @@
 .button_reset{
   background: #c1cfd9;
   outline:none;
+  width: 100px;
   &:hover{
     background: #99bed9;
     outline:none;
@@ -497,9 +506,14 @@
   position: fixed;
   top: 100px;
   left:0;
-  width: 40px;
+  width: 44px;
   height: 200px;
   border: 1px solid #625c5f;
+}
+.extra-block__item {
+  width: 44px;
+  height: 36px;
+  background: #d6d5d7;
 }
 
 .clearfix:after {

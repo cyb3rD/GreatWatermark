@@ -1,62 +1,4 @@
 @charset "UTF-8";
-
-/* _____________ // file upload _________ */
-.new-project-form-upload-name {
-  font-size:14px;
-  margin-bottom:8px;
-}
-.fileupload-wrapper {
-  width: 220px;
-  position: relative;
-  margin-bottom:15px;
-}
-.fileupload-label{
-  display: block;
-  width: 40px;
-  height: 28px;
-  position: absolute;
-  right: 0;
-  background: url(../img/download.png) no-repeat;
-  background-position: center center;
-  background-color: #f97e76;
-  border-radius: 0 4px 4px 0;
-}
-.fileupload{ /* хак, взятый из html5boilerplate */
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-.fileupload-input {
-  display: block;
-  height: 28px;
-  color:#9eb2c0;
-  background-color: #fff;
-  border: 1px solid #9eb2c0;
-  border-radius: 4px;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 12px;
-  padding-left:10px;
-  padding-top:5px;
-  width: 100%;
-}
-[disabled='disabled'] {
-  font-size: 12px;
-  padding-left:10px;
-  padding-top:5px;
-  color:#48cbe8;
-}
-/* _____________ // file upload end _________ */
-
-
-/* Вотермарк */
 .canvas__img {
   position: absolute;
 }
@@ -580,18 +522,18 @@ body {
   position: relative;
   min-height: 100%;
   min-width: 1130px;
-  /* ╨╛╨│╤А╨░╨╜╨╕╤З╨╡╨╜╨╕╨╡ ╤И╨╕╤А╨╕╨╜╤Л ╤Н╨║╤А╨░╨╜╨░*/
+  /* ограничение ширины экрана*/
   height: auto !important;
 }
 
-/* ╨Я╤А╨╕╨▒╤К╨╡╨╝ ╤Д╤Г╤В╨╡╤А ╨║ ╨╜╨╕╨╖╤Г*/
+/* Прибъем футер к низу*/
 .wrapper:after {
   content: "";
   height: 220px;
   display: block;
 }
 
-/* ╨Ю╨▒╤Й╨╕╨╡ ╨║╨╗╨░╤Б╤Б╤Л */
+/* Общие классы */
 .container {
   width: 1100px;
   margin: 0 auto;
@@ -708,13 +650,7 @@ p {
   color: #2e3641;
 }
 
-.control__input-img {
-  position: relative;
-  width: 220px;
-  padding: 20px;
-  padding-bottom: 0px;
-  border-bottom: 1px solid red;
-}
+.control__input-img,
 .control__position-img,
 .control__opacity {
   position: relative;
@@ -739,13 +675,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Firefox */
+  /* Для Firefox */
   -ms-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П IE */
+  /* Для IE */
   -webkit-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
+  /* Для Safari, Chrome, iOS */
   -o-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Opera */
+  /* Для Opera */
   transform: rotate(-45deg);
 }
 
@@ -827,6 +763,13 @@ p {
 
 .control__position-img {
   position: relative;
+  /* Убираем выделение. Возникает при частых нажатияж на стрелки.*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .control__title {
@@ -961,13 +904,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(135deg);
-  /* ╨Ф╨╗╤П Firefox */
+  /* Для Firefox */
   -ms-transform: rotate(135deg);
-  /* ╨Ф╨╗╤П IE */
+  /* Для IE */
   -webkit-transform: rotate(135deg);
-  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
+  /* Для Safari, Chrome, iOS */
   -o-transform: rotate(135deg);
-  /* ╨Ф╨╗╤П Opera */
+  /* Для Opera */
   transform: rotate(135deg);
   cursor: pointer;
 }
@@ -993,13 +936,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Firefox */
+  /* Для Firefox */
   -ms-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П IE */
+  /* Для IE */
   -webkit-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
+  /* Для Safari, Chrome, iOS */
   -o-transform: rotate(-45deg);
-  /* ╨Ф╨╗╤П Opera */
+  /* Для Opera */
   transform: rotate(-45deg);
   cursor: pointer;
 }
@@ -1122,6 +1065,7 @@ p {
 .button_download {
   background: #f17a73;
   outline: none;
+  width: 100px;
 }
 .button_download:hover {
   background: #f85045;
@@ -1136,6 +1080,7 @@ p {
 .button_reset {
   background: #c1cfd9;
   outline: none;
+  width: 100px;
 }
 .button_reset:hover {
   background: #99bed9;
@@ -1162,9 +1107,15 @@ p {
   position: fixed;
   top: 100px;
   left: 0;
-  width: 40px;
+  width: 44px;
   height: 200px;
   border: 1px solid #625c5f;
+}
+
+.extra-block__item {
+  width: 44px;
+  height: 36px;
+  background: #d6d5d7;
 }
 
 .clearfix:after {
