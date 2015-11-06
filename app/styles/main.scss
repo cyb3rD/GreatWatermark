@@ -513,8 +513,7 @@
   margin: auto 0;
 }
 .extra-block__item {
-  width: 44px;
-  height: 44px;
+
   background: #d6d5d7;
   cursor: pointer;margin-bottom: 11px;
   border-radius: 0 5px 5px 0;
@@ -536,12 +535,13 @@
 .extra-block:hover .extra-block__item__social,
 .extra-block__item__social:hover {
   visibility: visible;
+  transform: translate(0px,-53px);
 }
 .extra-block__item__social_tw:hover,
 .extra-block__item__social_fb:hover,
 .extra-block__item__social_vk:hover {
   transform: rotate(-360deg);
-  transition-duration: .7s;
+  transition-duration: 1.7s;
 }
 
 
