@@ -6,12 +6,12 @@ var changePlace = (function () {
 
 	// Восстанавливаем значения по умолчанию
 	restorePosDefault = function () {
-		var boxTextX = $('.position__control_x_text'),
-			boxTextY = $('.position__control_y_text'),
+		var boxTextX = $('#value__x_point'),
+			boxTextY = $('#value__y_point'),
 			img = $('.canvas__img');
 		img.css('top',0).css('left',0);
-		boxTextX.text('0');
-		boxTextY.text('0');
+		boxTextX.val('0');
+		boxTextY.val('0');
 		$(".position__grid_item").removeClass('active');
 		$("#1").addClass('active');
 	};
@@ -43,13 +43,13 @@ var changePlace = (function () {
 	// При клике верх по X меняем значение в боксе, смещаем картинку по X вправо 
 	var _increaseX = function(e) {
 		e.preventDefault();
-		var boxText = $('.position__control_x_text'),
+		var boxText = $('#value__x_point'),
 			img = $('.canvas__img'),
 			cX = img.position().left + 1;
 			imgWidth = img.width(),
 			canvasWidth = $('.canvas__block').width();
 		if (cX + imgWidth <= canvasWidth) {
-			boxText.text(cX);
+			boxText.val(cX);
 			img.css("left", cX + "px");
 		};
 	};
@@ -57,11 +57,11 @@ var changePlace = (function () {
 	// При клике вниз по X меняем значение в боксе, смещаем картинку по X влево 
 	var _lowerX = function(e) {
 		e.preventDefault();
-		var boxText = $('.position__control_x_text'),
+		var boxText = $('#value__x_point'),
 			img = $('.canvas__img'),
 			cX = img.position().left - 1;
 		if (cX >= 0) {
-			boxText.text(cX);
+			boxText.val(cX);
 			img.css("left", cX + "px");
 		};
 	};
@@ -69,13 +69,13 @@ var changePlace = (function () {
 	// При клике вверх по Y меняем значение в боксе, смещаем картинку по Y вниз 
 	var _increaseY = function(e) {
 		e.preventDefault();
-		var boxText = $('.position__control_y_text'),
+		var boxText = $('#value__y_point'),
 			img = $('.canvas__img'),
 			cY = img.position().top + 1,
 			imgHeight = img.height(),
 			canvasHeight = $('.canvas__block').height();
 		if (cY + imgHeight <= canvasHeight) {
-			boxText.text(cY);
+			boxText.val(cY);
 			img.css("top", cY + "px");
 		};
 	};
@@ -83,11 +83,11 @@ var changePlace = (function () {
 	// При клике вверх по Y меняем значение в боксе, смещаем картинку по Y вниз 
 	var _lowerY = function(e) {
 		e.preventDefault();
-		var boxText = $('.position__control_y_text'),
+		var boxText = $('#value__y_point'),
 			img = $('.canvas__img'),
 			cY = img.position().top - 1;
 		if (cY >= 0) {
-			boxText.text(cY);
+			boxText.val(cY);
 			img.css("top", cY + "px");
 		};
 	};
@@ -96,8 +96,8 @@ var changePlace = (function () {
 	var _placeImg = function(e) {
 		e.preventDefault();
 		var img = $('.canvas__img'),
-			boxTextX = $('.position__control_x_text'),
-			boxTextY = $('.position__control_y_text'),
+			boxTextX = $('#value__x_point'),
+			boxTextY = $('#value__y_point'),
 			$this = $(this);
 		$(".position__grid_item").removeClass('active');
 		$this.addClass('active');
@@ -130,8 +130,8 @@ var changePlace = (function () {
 				img.css('top', $('.canvas__block').height() - img.height()).css('left', $('.canvas__block').width() - img.width());
 				break
 		}	
-		boxTextX.text(img.position().left);
-		boxTextY.text(img.position().top);
+		boxTextX.val(img.position().left);
+		boxTextY.val(img.position().top);
 	}
 	
 	

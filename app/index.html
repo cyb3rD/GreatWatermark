@@ -17,6 +17,8 @@
 		<!-- build:js js/modernizr.min.js-->
 		<script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
 		<!-- endbuild-->
+		<!-- Подключаем стили CSS для библиотеки Jquery UI-->
+		<link href="bower/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -27,30 +29,30 @@
 			<div class="wrap__inner">
 				<div class="wrap__inner__left">
 					<h1 class="title__name">Генератор водяных знаков</h1>
-					<div id="canvas" class="canvas__block"><img src="/img/1.jpg" class="canvas__img"></div>
+					<div id="canvas" class="canvas__block"><img src="#" class="canvas__img"></div>
 				</div>
 				<div class="wrap__inner__right">
 					<div class="control__block">
 						<div class="control__title">Настройки</div>
 						<div class="control__input-img">
 							<div class="control__form__parent-img">
-								<form action="" class="parent-img">
-									<label>
-										<div class="form__parent__title">Исходное изображение</div>
-										<input type="text" placeholder="загрузите изображение" class="form__parent__input_text">
-										<input type="file" class="form__parent__input_file">
-									</label>
-									<button class="form__parent__input_button"><img src="img/download.png"></button>
-								</form>
-							</div>
-							<div class="control__form__child-img">
-								<form action="" class="parent-img">
-									<label>
-										<div class="form__child__title">Водяной знак</div>
-										<input type="text" placeholder="загрузите изображение" class="form__child__input_text">
-										<input type="file" class="form__child__input_file">
-									</label>
-									<button class="form__child__input_button"><img src="img/download.png"></button>
+								<form id="parent-img" action="" class="parent-img">
+									<div id="uploadfile" class="fileupload-wrapper">
+										<p class="new-project-form-upload-name">Исходное изображение</p>
+										<label class="fileupload-label">
+											<input id="main_img" type="file" name="files[]" class="fileupload">
+											<input id="main_img_url" type="hidden" name="fileurl">
+										</label>
+										<input id="main_img_name" type="text" name="filename" placeholder="Загрузите изображение" disabled class="fileupload-input">
+									</div>
+									<div id="uploadfile" class="fileupload-wrapper">
+										<p class="new-project-form-upload-name">Водяной знак</p>
+										<label class="fileupload-label">
+											<input id="water_img" type="file" name="files[]" class="fileupload">
+											<input id="water_img_url" type="hidden" name="fileurl">
+										</label>
+										<input id="water_img_name" type="text" name="filename" placeholder="Загрузите изображение" disabled class="fileupload-input">
+									</div>
 								</form>
 							</div>
 						</div>
@@ -90,8 +92,8 @@
 									<li class="position__control_li">
 										<div class="position__text-x">X</div>
 										<div class="position__control_x">
-											<div class="position__control_x_text">
-												<input type="text" id="value__x_point" value="100">
+											<div class="position__control_x_text"> 
+												<input type="text" id="value__x_point" value="0">
 											</div>
 										</div>
 										<div class="position__control__x_point">
@@ -103,7 +105,7 @@
 										<div class="position__text-y">Y</div>
 										<div class="position__control_y">
 											<div class="position__control_y_text">
-												<input type="text" id="value__y_point" value="100">
+												<input type="text" id="value__y_point" value="0">
 											</div>
 										</div>
 										<div class="position__control__y_point">
@@ -133,11 +135,20 @@
 				</div>
 			</div>
 			<footer class="footer">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</footer>
-			<div class="extra-block"></div>
+			<div class="extra-block">
+				<div class="extra-block__item sprite sprite-social-like"></div>
+				<div class="extra-block__item__social">
+					<div class="extra-block__item__social_tw sprite sprite-social-tw"></div>
+					<div class="extra-block__item__social_fb sprite sprite-social-fb"></div>
+					<div class="extra-block__item__social_vk sprite sprite-social-vk"></div>
+				</div>
+			</div>
 		</div>
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="bower/jquery-ui/jquery-ui.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/place.js"></script>
+		<script type="text/javascript" src="js/opacity.js"></script>
+		<script type="text/javascript" src="js/upload.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
