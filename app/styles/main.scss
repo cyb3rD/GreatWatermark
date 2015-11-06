@@ -1,3 +1,58 @@
+/* _____________ // file upload _________ */
+.new-project-form-upload-name {
+  font-size:14px;
+  margin-bottom:8px;
+}
+.fileupload-wrapper {
+  width: 220px;
+  position: relative;
+  margin-bottom:15px;
+}
+.fileupload-label{
+  display: block;
+  width: 40px;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  background: url(../img/download.png) no-repeat;
+  background-position: center center;
+  background-color: #f97e76;
+  border-radius: 0 4px 4px 0;
+}
+.fileupload{ /* хак, взятый из html5boilerplate */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.fileupload-input {
+  display: block;
+  height: 28px;
+  color:#9eb2c0;
+  background-color: #fff;
+  border: 1px solid #9eb2c0;
+  border-radius: 4px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+  padding-left:10px;
+  padding-top:5px;
+  width: 100%;
+}
+[disabled='disabled'] {
+  font-size: 12px;
+  padding-left:10px;
+  padding-top:5px;
+  color:#48cbe8;
+}
+/* _____________ // file upload end _________ */
+
 .canvas__img {
   position:absolute;
 }

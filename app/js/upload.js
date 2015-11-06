@@ -61,7 +61,7 @@ var upload = (function() {
 		filename.val(path); 
 
 		// ОТПРАВЛЯЕМ ВОТЕРМАРК
-
+		
 		var _ajaxForm = function () { 
 
 		    var form = $('#parent-img'),
@@ -88,7 +88,7 @@ var upload = (function() {
 		};
 		// ТОЧНЕЕ ТУТ ОТПРАВЛЯЕМ ВОТЕРМАРК
 		_ajaxForm()
-
+		
 	};
 	
 	
