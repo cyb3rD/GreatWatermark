@@ -67,3 +67,34 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
 }
 
+/* --------- centered --------- */
+
+@mixin absolute-center {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+
+/* --------- compass sprites --------- */
+
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+	$sprite-image: sprite-file($map, $sprite);
+	$sprite-map: sprite-url($map);
+	$sprite-position: sprite-position($map, $sprite);
+	$sprite-layout: smart;
+
+	background: $sprite-map $sprite-position $repeat;
+
+	@if ($height == true) {
+		$sprite-height: image-height($sprite-image);
+		height: $sprite-height;
+	}
+
+	@if ($width == true) {
+		$sprite-width: image-width($sprite-image);
+		width: $sprite-width;
+	}
+}

@@ -1,3 +1,58 @@
+/* _____________ // file upload _________ */
+.new-project-form-upload-name {
+  font-size:14px;
+  margin-bottom:8px;
+}
+.fileupload-wrapper {
+  width: 220px;
+  position: relative;
+  margin-bottom:15px;
+}
+.fileupload-label{
+  display: block;
+  width: 40px;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  background: url(../img/download.png) no-repeat;
+  background-position: center center;
+  background-color: #f97e76;
+  border-radius: 0 4px 4px 0;
+}
+.fileupload{ /* хак, взятый из html5boilerplate */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.fileupload-input {
+  display: block;
+  height: 28px;
+  color:#9eb2c0;
+  background-color: #fff;
+  border: 1px solid #9eb2c0;
+  border-radius: 4px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+  padding-left:10px;
+  padding-top:5px;
+  width: 100%;
+}
+[disabled='disabled'] {
+  font-size: 12px;
+  padding-left:10px;
+  padding-top:5px;
+  color:#48cbe8;
+}
+/* _____________ // file upload end _________ */
+
 .canvas__img {
   position:absolute;
 }
@@ -8,6 +63,10 @@
 @import "_misc/mixins";
 
 @import "_misc/adjustment";
+
+@import "_sections/aside";
+
+@import "_misc/fonts";
 
 * {
   font-family: sans-serif;
@@ -97,7 +156,7 @@
   position: relative;
   width: 220px;
   padding: 20px;
-  padding-bottom: 30px;
+  //padding-bottom: 30px;
   border-bottom: 1px solid red;
   &:after {
     content:"";
@@ -126,7 +185,7 @@
 }
 .control__form__parent-img {
   display: inline-block;
-  margin-bottom: 25px;
+  //margin-bottom: 25px;
 }
 .form__parent__title,
 .form__child__title{
@@ -503,7 +562,7 @@
 }
 
 .extra-block {
-  position:absolute;
+  position:fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -513,8 +572,7 @@
   margin: auto 0;
 }
 .extra-block__item {
-  width: 44px;
-  height: 44px;
+
   background: #d6d5d7;
   cursor: pointer;margin-bottom: 11px;
   border-radius: 0 5px 5px 0;
@@ -536,6 +594,8 @@
 .extra-block:hover .extra-block__item__social,
 .extra-block__item__social:hover {
   visibility: visible;
+  transform: translate(0px,-83px);
+  transition-duration: .7s;
 }
 .extra-block__item__social_tw:hover,
 .extra-block__item__social_fb:hover,
