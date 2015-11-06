@@ -535,7 +535,8 @@
 .extra-block:hover .extra-block__item__social,
 .extra-block__item__social:hover {
   visibility: visible;
-  transform: translate(0px,-53px);
+  transform: translate(0px,-83px);
+  transition-duration: .7s;
 }
 .extra-block__item__social_tw:hover,
 .extra-block__item__social_fb:hover,
