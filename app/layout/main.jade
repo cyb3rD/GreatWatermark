@@ -34,7 +34,7 @@ html(lang="Ru-ru")
                     h1.title__name
                         | Генератор водяных знаков
                     .canvas__block#canvas
-                        img(src="#").canvas__img
+                        div.canvas__img.upload-img
 
                 .wrap__inner__right
                     .control__block
@@ -51,7 +51,7 @@ html(lang="Ru-ru")
                                             input(id="main_img_url" type="hidden" name="fileurl")
                                           input(id="main_img_name" type="text" class="fileupload-input" name="filename" placeholder="Загрузите изображение" disabled)
 
-                                    .fileupload-wrapper#uploadfile
+                                    .fileupload-wrapper#uploadWaterMark
                                         p.new-project-form-upload-name Водяной знак
                                         label.fileupload-label
                                             input(id="water_img" class="fileupload" type="file" name="files[]")
@@ -109,8 +109,10 @@ html(lang="Ru-ru")
 
         script(type="text/javascript" src="bower/jquery/jquery.min.js")
         script(type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js")
+        script(type="text/javascript" src="bower/blueimp-file-upload/js/jquery.fileupload.js")
         script(type="text/javascript" src="js/place.js")
         script(type="text/javascript" src="js/opacity.js")
         script(type="text/javascript" src="js/upload.js")
         script(type="text/javascript" src="js/main.js")
+        
         
