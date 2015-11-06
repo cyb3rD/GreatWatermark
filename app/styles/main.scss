@@ -64,6 +64,10 @@
 
 @import "_misc/adjustment";
 
+@import "_sections/aside";
+
+@import "_misc/fonts";
+
 * {
   font-family: sans-serif;
   color: #2e3641;
@@ -558,7 +562,7 @@
 }
 
 .extra-block {
-  position:absolute;
+  position:fixed;
   top: 0;
   left: 0;
   right: 0;
