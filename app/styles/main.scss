@@ -156,7 +156,7 @@
   position: relative;
   width: 220px;
   padding: 20px;
-  padding-bottom: 30px;
+  //padding-bottom: 30px;
   border-bottom: 1px solid red;
   &:after {
     content:"";
@@ -185,7 +185,7 @@
 }
 .control__form__parent-img {
   display: inline-block;
-  margin-bottom: 25px;
+  //margin-bottom: 25px;
 }
 .form__parent__title,
 .form__child__title{
