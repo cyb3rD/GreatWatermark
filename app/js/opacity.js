@@ -18,10 +18,6 @@ $(document).ready(function(){
   /*  Reset Button  */
   $("#reset").click(function(){
     $("#parent-img")[0].reset();
-<<<<<<< HEAD
-    //$("#child-img")[0].reset();
-=======
->>>>>>> 611abf59fa6259e885760bb8b5654b313198b443
     $("#sliderAmount").val('49');
     $("#slider-opacity div").css({'width':'49%'});
     $("#slider-opacity span").css({'left':'49%'});
