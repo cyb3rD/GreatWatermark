@@ -51,9 +51,7 @@ gulp.task('server', function () {
 		port : paths.browserSync.serverPort,
 		// Tunnel for access from remote PC
 		// tunnel: 'samplestore',
-		server: {
-			baseDir: paths.browserSync.baseDir
-		}
+		proxy: 'watermark/app'
 	});
 });
 
