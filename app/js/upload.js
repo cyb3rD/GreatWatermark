@@ -2,6 +2,27 @@ var upload = (function() {
 
 	//	Иницализация модуля
 	var init = function() {
+
+		$('#main_img').fileupload({
+		    url: 'php/upload.php',
+		    
+		    add: function(e, data) {
+		    	data.submit();
+			},
+
+			done: function(e, data) {
+				var img = $('.test-img');
+					//uploadImg = data.result.files[0];
+
+				//$('.upload-img').text(uploadImg.name);
+				img.attr('src', 'http://lorempixel.com/200/200/');
+				
+				img.appendTo('.upload-img');
+			}	
+
+		});
+
+
 		_setUpListeners();
 	};
 
@@ -20,7 +41,9 @@ var upload = (function() {
 		
 		filename.val(path); 
 
-		// ОТПРАВЛЯЕМ ГЛАВНУЮ ПИКЧУ
+
+
+		/*// ОТПРАВЛЯЕМ ГЛАВНУЮ ПИКЧУ
 
 		var _ajaxForm = function () { 
 
@@ -48,7 +71,7 @@ var upload = (function() {
 		};
 		// ТОЧНЕЕ ТУТ ОТПРАВЛЯЕМ ГЛАВНУЮ ПИКЧУ
 		_ajaxForm()
-
+		*/
 	};
 
 	// Показываем путь для вотермарка
