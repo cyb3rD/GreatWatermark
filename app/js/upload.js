@@ -77,37 +77,6 @@ var upload = (function() {
 		
 		filename.val(path); 
 
-
-
-		/*// ОТПРАВЛЯЕМ ГЛАВНУЮ ПИКЧУ
-
-		var _ajaxForm = function () { 
-
-		    var form = $('#parent-img'),
-	            url = 'php/upload.php',
-	            data = form.serialize();
-	            console.log(form);
-
-	        // ajax
-	        $.ajax({
-	            url: url,
-	            type: 'POST',
-	            dataType: 'json',
-	            data: data
-	        }).done(function(ans) {
-	                if (ans.status === 'ok') {
-	                    console.log(ans);   
-	                } else {
-	                    console.log(ans);    
-	                }
-	            })
-	            .fail(function() {
-	                console.log("error");
-	            });
-		};
-		// ТОЧНЕЕ ТУТ ОТПРАВЛЯЕМ ГЛАВНУЮ ПИКЧУ
-		_ajaxForm()
-		*/
 	};
 
 	// Показываем путь для вотермарка
@@ -118,44 +87,9 @@ var upload = (function() {
 			path = $("#water_img").val().replace(/\\/g, '/').replace(/.*\//, '');
 		
 		filename.val(path); 
-
-		// ОТПРАВЛЯЕМ ВОТЕРМАРК
-		
-		var _ajaxForm = function () { 
-
-		    var form = $('#parent-img'),
-	            url = 'php/upload.php',
-	            data = form.serialize();
-	            console.log(data);
-
-	        // ajax
-	        $.ajax({
-	            url: url,
-	            type: 'POST',
-	            dataType: 'json',
-	            data: data
-	        }).done(function(ans) {
-	                if (ans.status === 'ok') {
-	                    console.log(ans);   
-	                } else {
-	                    console.log(ans);    
-	                }
-	            })
-	            .fail(function() {
-	                console.log("error");
-	            });
-		};
-		// ТОЧНЕЕ ТУТ ОТПРАВЛЯЕМ ВОТЕРМАРК
-		_ajaxForm()
 		
 	};
 	
-	
-		
-
-
-
-
 	// Возвращаем объект (публичные методы)
 	return {
 		init: init
