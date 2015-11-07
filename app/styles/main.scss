@@ -594,8 +594,8 @@
 .extra-block:hover .extra-block__item__social,
 .extra-block__item__social:hover {
   visibility: visible;
-  //transform: translate(0px,-83px);
-  //transition-duration: .7s;
+  transform: translate(0px,-83px);
+  transition-duration: .7s;
 }
 .extra-block__item__social_tw:hover,
 .extra-block__item__social_fb:hover,
@@ -681,9 +681,4 @@
   display: table; }
 
 .clearfix:after {
-<<<<<<< HEAD
   clear: both; }
-//
-=======
-  clear: both; }
->>>>>>> 791ae85a3e4107b0f449371389be6b07a0ec3682
