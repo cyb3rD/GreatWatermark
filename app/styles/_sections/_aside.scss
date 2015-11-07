@@ -48,35 +48,6 @@
   position: relative;
 }
 
-$socials: fb, vk, tw;
-$socials-map: sprite-map("socials/*.png", $spacing: 70px);
 
-.like__link {
-  background: #d6d4d7;
-  padding: 4.5px 5.5px;
-  position: absolute;
-  border-radius: 0 5px 5px 0;
-  top: 0;
-  left: 42px;
-  .like__icon {
-    @include get-sprite($socials-map, social-like);
-    &:hover {
-      @include get-sprite($socials-map, social-like-on);
-    }
-  }
-}
 
-@each $social in $socials {
-  .sharing__link_#{$social} {
-    $social: 'social-' + $social;
-    @include get-sprite($socials-map, $social);
-
-    &:hover {
-      $icon-name: $social + '-on';
-      @include get-sprite($socials-map, $icon-name);
-      transform: rotate(360deg);
-      transition-duration: .7s;
-    }
-  }
-}
 //- -------------------- SOCIAL SHARING AND LAGUAGE !!!END!!!-------------------- -//

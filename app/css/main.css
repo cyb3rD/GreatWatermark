@@ -24,7 +24,7 @@
 }
 
 .fileupload {
-  /* хак, взятый из html5boilerplate */
+  /* ╤Е╨░╨║, ╨▓╨╖╤П╤В╤Л╨╣ ╨╕╨╖ html5boilerplate */
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -589,18 +589,18 @@ body {
   position: relative;
   min-height: 100%;
   min-width: 1130px;
-  /* ограничение ширины экрана*/
+  /* ╨╛╨│╤А╨░╨╜╨╕╤З╨╡╨╜╨╕╨╡ ╤И╨╕╤А╨╕╨╜╤Л ╤Н╨║╤А╨░╨╜╨░*/
   height: auto !important;
 }
 
-/* Прибъем футер к низу*/
+/* ╨Я╤А╨╕╨▒╤К╨╡╨╝ ╤Д╤Г╤В╨╡╤А ╨║ ╨╜╨╕╨╖╤Г*/
 .wrapper:after {
   content: "";
   height: 220px;
   display: block;
 }
 
-/* Общие классы */
+/* ╨Ю╨▒╤Й╨╕╨╡ ╨║╨╗╨░╤Б╤Б╤Л */
 .container {
   width: 1100px;
   margin: 0 auto;
@@ -686,64 +686,6 @@ p {
   height: 41px;
   display: block;
   position: relative;
-}
-
-.like__link {
-  background: #d6d4d7;
-  padding: 4.5px 5.5px;
-  position: absolute;
-  border-radius: 0 5px 5px 0;
-  top: 0;
-  left: 42px;
-}
-.like__link .like__icon {
-  background: url('../img/socials-se3ad18e3f5.png') 0 -306px no-repeat;
-  height: 32px;
-  width: 32px;
-}
-.like__link .like__icon:hover {
-  background: url('../img/socials-se3ad18e3f5.png') 0 -204px no-repeat;
-  height: 32px;
-  width: 32px;
-}
-
-.sharing__link_fb {
-  background: url('../img/socials-se3ad18e3f5.png') 0 -102px no-repeat;
-  height: 32px;
-  width: 32px;
-}
-.sharing__link_fb:hover {
-  background: url('../img/socials-se3ad18e3f5.png') 0 0 no-repeat;
-  height: 32px;
-  width: 32px;
-  transform: rotate(360deg);
-  transition-duration: .7s;
-}
-
-.sharing__link_vk {
-  background: url('../img/socials-se3ad18e3f5.png') 0 -714px no-repeat;
-  height: 32px;
-  width: 32px;
-}
-.sharing__link_vk:hover {
-  background: url('../img/socials-se3ad18e3f5.png') 0 -612px no-repeat;
-  height: 32px;
-  width: 32px;
-  transform: rotate(360deg);
-  transition-duration: .7s;
-}
-
-.sharing__link_tw {
-  background: url('../img/socials-se3ad18e3f5.png') 0 -510px no-repeat;
-  height: 32px;
-  width: 32px;
-}
-.sharing__link_tw:hover {
-  background: url('../img/socials-se3ad18e3f5.png') 0 -408px no-repeat;
-  height: 32px;
-  width: 32px;
-  transform: rotate(360deg);
-  transition-duration: .7s;
 }
 
 @font-face {
@@ -859,13 +801,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(-45deg);
-  /* Для Firefox */
+  /* ╨Ф╨╗╤П Firefox */
   -ms-transform: rotate(-45deg);
-  /* Для IE */
+  /* ╨Ф╨╗╤П IE */
   -webkit-transform: rotate(-45deg);
-  /* Для Safari, Chrome, iOS */
+  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
   -o-transform: rotate(-45deg);
-  /* Для Opera */
+  /* ╨Ф╨╗╤П Opera */
   transform: rotate(-45deg);
 }
 
@@ -946,7 +888,7 @@ p {
 
 .control__position-img {
   position: relative;
-  /* Убираем выделение. Возникает при частых нажатияж на стрелки.*/
+  /* ╨г╨▒╨╕╤А╨░╨╡╨╝ ╨▓╤Л╨┤╨╡╨╗╨╡╨╜╨╕╨╡. ╨Т╨╛╨╖╨╜╨╕╨║╨░╨╡╤В ╨┐╤А╨╕ ╤З╨░╤Б╤В╤Л╤Е ╨╜╨░╨╢╨░╤В╨╕╤П╨╢ ╨╜╨░ ╤Б╤В╤А╨╡╨╗╨║╨╕.*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -1087,13 +1029,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(135deg);
-  /* Для Firefox */
+  /* ╨Ф╨╗╤П Firefox */
   -ms-transform: rotate(135deg);
-  /* Для IE */
+  /* ╨Ф╨╗╤П IE */
   -webkit-transform: rotate(135deg);
-  /* Для Safari, Chrome, iOS */
+  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
   -o-transform: rotate(135deg);
-  /* Для Opera */
+  /* ╨Ф╨╗╤П Opera */
   transform: rotate(135deg);
   cursor: pointer;
 }
@@ -1119,13 +1061,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(-45deg);
-  /* Для Firefox */
+  /* ╨Ф╨╗╤П Firefox */
   -ms-transform: rotate(-45deg);
-  /* Для IE */
+  /* ╨Ф╨╗╤П IE */
   -webkit-transform: rotate(-45deg);
-  /* Для Safari, Chrome, iOS */
+  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
   -o-transform: rotate(-45deg);
-  /* Для Opera */
+  /* ╨Ф╨╗╤П Opera */
   transform: rotate(-45deg);
   cursor: pointer;
 }
@@ -1388,7 +1330,7 @@ p {
   background-position: -46px -973px;
 }
 
-/* _____________ тултипы _________ */
+/* _____________ ╤В╤Г╨╗╤В╨╕╨┐╤Л _________ */
 .qtip-mystyle {
   background-color: #f97e76;
   border-color: #f97e76;
@@ -1401,7 +1343,7 @@ p {
   color: #fff;
 }
 
-/* _____________ // тултипы _________ */
+/* _____________ // ╤В╤Г╨╗╤В╨╕╨┐╤Л _________ */
 .clearfix:after {
   clear: both;
 }
