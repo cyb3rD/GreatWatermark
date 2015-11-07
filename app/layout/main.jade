@@ -20,9 +20,11 @@ html(lang="Ru-ru")
         // endbuild
         // Подключаем стили CSS для библиотеки Jquery UI
         link(href='bower/jquery-ui/themes/base/jquery-ui.css', rel='stylesheet', type='text/css')
-
+        script(type='text/javascript', src='http://vk.com/js/api/share.js?93', charset='windows-1251')
+        
 
     body
+      
         <!--[if lt IE 7]>
         <p class="browsehappy">Вы используете <strong>устаревший</strong>браузер.Пожалуйста,
         <a href="http://browsehappy.com">обновите</a> его.</p>
@@ -97,22 +99,21 @@ html(lang="Ru-ru")
                                 button.button_download Скачать
             footer.footer
                 | © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
-
+            
+            #fb-root
             .extra-block
               .extra-block__item.sprite.sprite-social-like
               .extra-block__item__social
-                .extra-block__item__social_tw.sprite.sprite-social-tw
-                .extra-block__item__social_fb.sprite.sprite-social-fb
-                .extra-block__item__social_vk.sprite.sprite-social-vk
+                a(href='https://twitter.com/intent/tweet?button_hashtag=TwitterStories').extra-block__item__social_tw.sprite.sprite-social-tw
+                a.fb-share-button(data-href='https://developers.facebook.com/docs/plugins/', data-layout='icon_link').extra-block__item__social_fb.sprite.sprite-social-fb
+                a(href="http://vk.com/share.php?url=http%3A%2F%2Flocalhost%3A3000%2F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(0, this);" ).extra-block__item__social_vk.sprite.sprite-social-vk
 
-
-
+        
         script(type="text/javascript" src="bower/jquery/jquery.min.js")
         script(type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js")
         script(type="text/javascript" src="bower/blueimp-file-upload/js/jquery.fileupload.js")
         script(type="text/javascript" src="js/place.js")
         script(type="text/javascript" src="js/opacity.js")
         script(type="text/javascript" src="js/upload.js")
+        script(type="text/javascript" src="js/socials.js")
         script(type="text/javascript" src="js/main.js")
-        
-        

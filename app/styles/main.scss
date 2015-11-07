@@ -152,7 +152,7 @@
   position: relative;
   width: 220px;
   padding: 20px;
-  //padding-bottom: 30px;
+  padding-bottom: 30px;
   border-bottom: 1px solid red;
   &:after {
     content:"";
@@ -479,8 +479,8 @@
   color: #f6931f;
   font-weight: bold;
   background-color: transparent;
-  right: -90px;
-  top: 20px;
+  right: -28px;
+  top: 6px;
 }
 
 
@@ -590,8 +590,8 @@
 .extra-block:hover .extra-block__item__social,
 .extra-block__item__social:hover {
   visibility: visible;
-  transform: translate(0px,-83px);
-  transition-duration: .7s;
+  //transform: translate(0px,-83px);
+  //transition-duration: .7s;
 }
 .extra-block__item__social_tw:hover,
 .extra-block__item__social_fb:hover,
@@ -599,7 +599,6 @@
   transform: rotate(-360deg);
   transition-duration: .7s;
 }
-
 
 
 /*  Sprite Social  */
@@ -669,3 +668,4 @@
 
 .clearfix:after {
   clear: both; }
+//
