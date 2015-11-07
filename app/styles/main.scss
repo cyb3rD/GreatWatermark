@@ -65,8 +65,6 @@
 
 @import "_misc/adjustment";
 
-@import "_sections/aside";
-
 @import "_misc/fonts";
 
 
@@ -564,16 +562,7 @@
   color: #fff;
 }
 
-.extra-block {
-  position:fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 44px;
-  height: 44px;
-  margin: auto 0;
-}
+
 .extra-block__item {
 
   background: #d6d5d7;
@@ -663,6 +652,30 @@
     background-position: -46px -973px;
 }
 
+
+.socials__box {
+  position: fixed;
+  top: 42px;
+}
+
+.language__list {
+  margin-bottom: 45px;
+}
+.language__link {
+  border-radius: 0 5px 5px 0;
+  font-family: "SegoeUILight";
+  color: #8e9298;
+  background: #d6d4d7;
+  display: block;
+  margin-bottom: 1px;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 3px;
+    &.active {
+      color: #d6d4d7;
+      background: #b2b0b2;
+    }
+}
 /* _____________ тултипы _________ */
 .qtip-mystyle {
   background-color: #f97e76;

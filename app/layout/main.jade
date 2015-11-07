@@ -32,23 +32,6 @@ html(lang="Ru-ru")
         <![endif]-->
         .wrap
 
-            //- ---------------------------------------------------- -//
-            aside.socials__box
-                ul.language__list
-                    - var languages = ["РУС", "ENG"]
-                    each language in languages
-                        li.language__item
-                            a(href="#" id=((language == "РУС") ? "rus" : "eng") class="language__link" + ((language == "РУС") ? " active" : ""))= language
-                .sharing__box
-                    a(href="#" class="sharing__link_like like__link")
-                        .like__icon
-                    ul.sharing__list
-                    - var socials = ['fb', 'tw', 'vk']
-                    each social in socials
-                        li(class="sharing__item")
-                            a(href="#" class="sharing__link sharing__link_" + social)
-            //- ---------------------------------------------------- -//
-
             .wrap__inner.clearfix
 
                 .wrap__inner__left
@@ -113,20 +96,30 @@ html(lang="Ru-ru")
                                 
                         .control__button.clearfix
                             .control__button_reset
-                                button(id="reset").button_reset(lng="Reset") Сброс
+                                button(id="reset" lng="Reset").button_reset Сброс
                             .control__button_download
                                 button.button_download(lng="Download") Скачать
             footer.footer
                 | © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
             
             #fb-root
+
+             //- ---------------------------------------------------- -//
+            aside.socials__box
+                ul.language__list
+                    - var languages = ["РУС", "ENG"]
+                    each language in languages
+                        li.language__item
+                            a(href="#" id=((language == "РУС") ? "rus" : "eng") class="language__link" + ((language == "РУС") ? " active" : ""))= language
+                .extra-block
+                    .extra-block__item.sprite.sprite-social-like
+                    .extra-block__item__social
+                        a(href='https://twitter.com/intent/tweet?button_hashtag=TwitterStories').extra-block__item__social_tw.sprite.sprite-social-tw
+                        a.fb-share-button(data-href='https://developers.facebook.com/docs/plugins/', data-layout='icon_link').extra-block__item__social_fb.sprite.sprite-social-fb
+                        a(href="http://vk.com/share.php?url=http%3A%2F%2Flocalhost%3A3000%2F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(0, this);" ).extra-block__item__social_vk.sprite.sprite-social-vk
+            //- ---------------------------------------------------- -//
             
-            .extra-block
-              .extra-block__item.sprite.sprite-social-like
-              .extra-block__item__social
-                a(href='https://twitter.com/intent/tweet?button_hashtag=TwitterStories').extra-block__item__social_tw.sprite.sprite-social-tw
-                a.fb-share-button(data-href='https://developers.facebook.com/docs/plugins/', data-layout='icon_link').extra-block__item__social_fb.sprite.sprite-social-fb
-                a(href="http://vk.com/share.php?url=http%3A%2F%2Flocalhost%3A3000%2F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(0, this);" ).extra-block__item__social_vk.sprite.sprite-social-vk
+            
 
         
         script(type="text/javascript" src="bower/jquery/jquery.min.js")
