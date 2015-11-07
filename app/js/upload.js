@@ -2,7 +2,9 @@ var upload = (function() {
 
 	//	Иницализация модуля
 	var init = function() {
-
+		var kw = 0,
+			kh = 0,
+			k = 1;
 		$('#main_img').fileupload({
 		    url: 'php/upload.php',
 		    
@@ -16,12 +18,19 @@ var upload = (function() {
 					props = $.parseJSON(data["result"]);
 				canvas.append(main_img);
 				main_img = $(".canvas__main-img");
+				kw = props.width / canvas.width();
+				kh = props.height / canvas.height();
+				if (kw > kh) {
+					k = kw;
+				} else {
+					k = kh;
+				};
+
+				main_img.css("height", props.height / k + "px");
+				main_img.css("width", props.width / k + "px");	
 				main_img.css("background", "url(" + props.path+")");
-				main_img.css("width", props.width + "px");
-				main_img.css("height", props.height + "px");
-				main_img.css("border", "1px solid black");
-				canvas.append(main_img);
-			}
+				main_img.css("background-size", "100%");			
+			}	
 		});
 
 		$('#water_img').fileupload({
@@ -38,16 +47,19 @@ var upload = (function() {
 				canvas.append(water_img);
 				water_img = $(".canvas__img");
 				water_img.css("background", "url(" + props.path+")");
-				water_img.css("width", props.width + "px");
-				water_img.css("height", props.height + "px");
-				water_img.css("border", "1px solid black");
+				water_img.css("width", props.width / k + "px");
+				water_img.css("height", props.height / k + "px");
+				water_img.css("background-size", "100%");
 				canvas.append(water_img);
 				$('.upload-img').draggable({
 				   containment:'parent'
 				});
 				changePlace.init();
 			}
-		});		_setUpListeners();
+		});
+
+		
+		_setUpListeners();
 	};
 
 	// Установка прослушки
