@@ -8,6 +8,8 @@
 		<meta name="keywords" content="watermark, create, download, quick, easy">
 		<meta name="author" content="LoftSchool Team #1">
 		<title>GreatWatermark service</title>
+		<!-- Vendor-->
+		<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 		<!-- Bower CSS-->
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 		<!-- Dev CSS-->
@@ -27,40 +29,53 @@
 		<a href="http://browsehappy.com">обновите</a> его.</p>
 		<![endif]-->
 		<div class="wrap">
+			<aside class="socials__box">
+				<ul class="language__list">
+					<li class="language__item"><a href="#" id="rus" class="language__link active">РУС</a></li>
+					<li class="language__item"><a href="#" id="eng" class="language__link">ENG</a></li>
+				</ul>
+				<div class="sharing__box"><a href="#" class="sharing__link_like like__link">
+						<div class="like__icon"></div></a>
+					<ul class="sharing__list"></ul>
+					<li class="sharing__item"><a href="#" class="sharing__link sharing__link_fb"></a></li>
+					<li class="sharing__item"><a href="#" class="sharing__link sharing__link_tw"></a></li>
+					<li class="sharing__item"><a href="#" class="sharing__link sharing__link_vk"></a></li>
+				</div>
+			</aside>
 			<div class="wrap__inner">
 				<div class="wrap__inner__left">
-					<h1 class="title__name">Генератор водяных знаков</h1>
+					<h1 lng="Watermarks_generator" class="title__name">Генератор водяных знаков</h1>
 					<div id="canvas" class="canvas__block">
-						<div class="canvas__img upload-img"></div>
+						<div style="background:url(http://lorempixel.com/200/200);width:200px;height:200px" class="canvas__img upload-img"></div>
 					</div>
 				</div>
 				<div class="wrap__inner__right">
 					<div class="control__block">
-						<div class="control__title">Настройки</div>
+						<div lng="Settings" class="control__title">Настройки</div>
 						<div class="control__input-img">
 							<div class="control__form__parent-img">
 								<form id="parent-img" action="" class="parent-img">
 									<div id="uploadfile" class="fileupload-wrapper">
-										<p class="new-project-form-upload-name">Исходное изображение</p>
+										<p lng="Original_image" class="new-project-form-upload-name">Исходное изображение</p>
 										<label class="fileupload-label">
 											<input id="main_img" type="file" name="files[]" class="fileupload">
 											<input id="main_img_url" type="hidden" name="fileurl">
 										</label>
-										<input id="main_img_name" type="text" name="filename" placeholder="Загрузите изображение" disabled class="fileupload-input">
+										<input id="main_img_name" type="text" name="filename" placeholder="Загрузите изображение" disabled lng="Placeholder" class="fileupload-input">
 									</div>
 									<div id="uploadWaterMark" class="fileupload-wrapper">
-										<p class="new-project-form-upload-name">Водяной знак</p>
+										<p lng="Watermark" class="new-project-form-upload-name">Водяной знак</p>
 										<label class="fileupload-label">
 											<input id="water_img" type="file" name="files[]" class="fileupload">
 											<input id="water_img_url" type="hidden" name="fileurl">
 										</label>
-										<input id="water_img_name" type="text" name="filename" placeholder="Загрузите изображение" disabled class="fileupload-input">
+										<input id="water_img_name" type="text" name="filename" placeholder="Загрузите изображение" disabled lng="Placeholder" class="fileupload-input">
 									</div>
 								</form>
 							</div>
 						</div>
 						<div class="control__position-img clearfix">
-							<div class="control__position__title">Положение</div>
+							<div lng="Place" class="control__position__title">Положение</div>
 							<div class="control__position__grid clearfix">
 								<div id="1" class="position__grid_item active">
 									<!--a(href="" + item)=item-->
@@ -121,17 +136,17 @@
 						</div>
 						<div class="control__opacity clearfix">
 							<div class="opacity__controller">
-								<div class="opacity__title">Прозрачность</div>
+								<div lng="Transparency" class="opacity__title">Прозрачность</div>
 								<input type="text" id="sliderAmount" readonly style="">
 								<div id="slider-opacity"></div>
 							</div>
 						</div>
 						<div class="control__button clearfix">
 							<div class="control__button_reset">
-								<button id="reset" class="button_reset">Сброс</button>
+								<button id="reset" lng="Reset" class="button_reset">Сброс</button>
 							</div>
 							<div class="control__button_download">
-								<button class="button_download">Скачать</button>
+								<button lng="Download" class="button_download">Скачать</button>
 							</div>
 						</div>
 					</div>
@@ -145,6 +160,7 @@
 			</div>
 		</div>
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="bower/qtip2/jquery.qtip.js"></script>
 		<script type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="bower/blueimp-file-upload/js/jquery.fileupload.js"></script>
 		<script type="text/javascript" src="js/place.js"></script>
@@ -152,5 +168,7 @@
 		<script type="text/javascript" src="js/upload.js"></script>
 		<script type="text/javascript" src="js/socials.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/language.js"></script>
+		<script type="text/javascript" src="js/imgValid.js"></script>
 	</body>
 </html>

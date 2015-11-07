@@ -3,7 +3,5 @@
 /app/php/plugins
 node_modules
 app/bower
-app/css
-app/index.html
+/gulpfile.js
 /vendor/
-gulpfile.js

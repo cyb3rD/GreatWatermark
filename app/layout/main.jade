@@ -9,6 +9,8 @@ html(lang="Ru-ru")
         meta(name="author" content="LoftSchool Team #1")
         title
             block pageTitle
+        // Vendor
+        link(rel="stylesheet" href="bower/qtip2/jquery.qtip.css")
         // Bower CSS
         link(rel="stylesheet" href="bower/normalize-css/normalize.css")
         // Dev CSS
@@ -20,8 +22,13 @@ html(lang="Ru-ru")
         // endbuild
         // Подключаем стили CSS для библиотеки Jquery UI
         link(href='bower/jquery-ui/themes/base/jquery-ui.css', rel='stylesheet', type='text/css')
-        script(type='text/javascript', src='http://vk.com/js/api/share.js?93', charset='windows-1251')
+<<<<<<< HEAD
+        //script(type='text/javascript', src='http://vk.com/js/api/share.js?93', charset='windows-1251')
         
+=======
+        
+
+>>>>>>> 791ae85a3e4107b0f449371389be6b07a0ec3682
 
     body
       
@@ -30,38 +37,56 @@ html(lang="Ru-ru")
         <a href="http://browsehappy.com">обновите</a> его.</p>
         <![endif]-->
         .wrap
+
+            //- ---------------------------------------------------- -//
+            aside.socials__box
+                ul.language__list
+                    - var languages = ["РУС", "ENG"]
+                    each language in languages
+                        li.language__item
+                            a(href="#" id=((language == "РУС") ? "rus" : "eng") class="language__link" + ((language == "РУС") ? " active" : ""))= language
+                .sharing__box
+                    a(href="#" class="sharing__link_like like__link")
+                        .like__icon
+                    ul.sharing__list
+                    - var socials = ['fb', 'tw', 'vk']
+                    each social in socials
+                        li(class="sharing__item")
+                            a(href="#" class="sharing__link sharing__link_" + social)
+            //- ---------------------------------------------------- -//
+
             .wrap__inner
 
                 .wrap__inner__left
-                    h1.title__name
+                    h1.title__name(lng="Watermarks_generator")
                         | Генератор водяных знаков
                     .canvas__block#canvas
-                        div.canvas__img.upload-img
+                        div(style="background:url(http://lorempixel.com/200/200);width:200px;height:200px").canvas__img.upload-img
 
                 .wrap__inner__right
                     .control__block
-                        .control__title
+                        .control__title(lng="Settings")
                             | Настройки
                         .control__input-img
                             .control__form__parent-img
                                 form.parent-img#parent-img(action="")
 
                                     .fileupload-wrapper#uploadfile
-                                        p.new-project-form-upload-name Исходное изображение
+                                        p.new-project-form-upload-name(lng="Original_image") Исходное изображение
                                         label.fileupload-label
                                             input(id="main_img" class="fileupload" type="file" name="files[]")
                                             input(id="main_img_url" type="hidden" name="fileurl")
-                                          input(id="main_img_name" type="text" class="fileupload-input" name="filename" placeholder="Загрузите изображение" disabled)
+                                          input(id="main_img_name" type="text" class="fileupload-input" name="filename" placeholder="Загрузите изображение" disabled lng="Placeholder")
 
                                     .fileupload-wrapper#uploadWaterMark
-                                        p.new-project-form-upload-name Водяной знак
+                                        p.new-project-form-upload-name(lng="Watermark") Водяной знак
                                         label.fileupload-label
                                             input(id="water_img" class="fileupload" type="file" name="files[]")
                                             input(id="water_img_url" type="hidden" name="fileurl")
-                                          input(id="water_img_name" type="text" class="fileupload-input" name="filename" placeholder="Загрузите изображение" disabled)
+                                          input(id="water_img_name" type="text" class="fileupload-input" name="filename" placeholder="Загрузите изображение" disabled lng="Placeholder")
 
                         .control__position-img.clearfix
-                            .control__position__title Положение
+                            .control__position__title(lng="Place") Положение
                             .control__position__grid.clearfix
                                 - var items = ['1','2','3','4','5','6','7','8','9']
                                 each item in items
@@ -88,19 +113,24 @@ html(lang="Ru-ru")
 
                         .control__opacity.clearfix
                             .opacity__controller
-                                .opacity__title Прозрачность
+                                .opacity__title(lng="Transparency") Прозрачность
                                 input(type="text" id="sliderAmount" readonly style="")
                                 #slider-opacity
                                 
                         .control__button.clearfix
                             .control__button_reset
-                                button(id="reset").button_reset Сброс
+                                button(id="reset").button_reset(lng="Reset") Сброс
                             .control__button_download
-                                button.button_download Скачать
+                                button.button_download(lng="Download") Скачать
             footer.footer
                 | © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+<<<<<<< HEAD
             
             #fb-root
+=======
+
+            
+>>>>>>> 791ae85a3e4107b0f449371389be6b07a0ec3682
             .extra-block
               .extra-block__item.sprite.sprite-social-like
               .extra-block__item__social
@@ -110,6 +140,7 @@ html(lang="Ru-ru")
 
         
         script(type="text/javascript" src="bower/jquery/jquery.min.js")
+        script(type="text/javascript" src="bower/qtip2/jquery.qtip.js")
         script(type="text/javascript" src="bower/jquery-ui/jquery-ui.min.js")
         script(type="text/javascript" src="bower/blueimp-file-upload/js/jquery.fileupload.js")
         script(type="text/javascript" src="js/place.js")
@@ -117,3 +148,8 @@ html(lang="Ru-ru")
         script(type="text/javascript" src="js/upload.js")
         script(type="text/javascript" src="js/socials.js")
         script(type="text/javascript" src="js/main.js")
+<<<<<<< HEAD
+=======
+        script(type="text/javascript" src="js/language.js")
+        script(type="text/javascript" src="js/imgValid.js")
+>>>>>>> 791ae85a3e4107b0f449371389be6b07a0ec3682

@@ -64,6 +64,10 @@
 
 @import "_misc/adjustment";
 
+@import "_sections/aside";
+
+@import "_misc/fonts";
+
 * {
   font-family: sans-serif;
   color: #2e3641;
@@ -558,7 +562,7 @@
 }
 
 .extra-block {
-  position:absolute;
+  position:fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -656,8 +660,18 @@
     background-position: -46px -973px;
 }
 
-
-
+/* _____________ тултипы _________ */
+.qtip-mystyle {
+  background-color: #f97e76;
+  border-color: #f97e76;
+  font-family: 'Arial';
+  color: #ffffff;
+  font-size: 13px;
+}
+.qtip-content {
+  color: #fff;
+}
+/* _____________ // тултипы _________ */
 
 .clearfix:after {
   clear: both; }
@@ -667,5 +681,9 @@
   display: table; }
 
 .clearfix:after {
+<<<<<<< HEAD
   clear: both; }
 //
+=======
+  clear: both; }
+>>>>>>> 791ae85a3e4107b0f449371389be6b07a0ec3682

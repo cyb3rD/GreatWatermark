@@ -11,18 +11,18 @@ var upload = (function() {
 			},
 
 			done: function(e, data) {
-				var img = $('.test-img');
-					//uploadImg = data.result.files[0];
+				var img = $('.upload-img'),
+					uploadImg = data["result"];
 
-				//$('.upload-img').text(uploadImg.name);
-				img.attr('src', 'http://lorempixel.com/200/200/');
-				
-				img.appendTo('.upload-img');
-			}	
+				console.log(uploadImg);
+				img.attr('background', '');
+			}
 
 		});
 
-
+		$('.upload-img').draggable({
+		   containment:'parent'
+		});
 		_setUpListeners();
 	};
 
@@ -50,7 +50,7 @@ var upload = (function() {
 		    var form = $('#parent-img'),
 	            url = 'php/upload.php',
 	            data = form.serialize();
-	            console.log(data);
+	            console.log(form);
 
 	        // ajax
 	        $.ajax({
@@ -122,7 +122,7 @@ var upload = (function() {
 
 	// Возвращаем объект (публичные методы)
 	return {
-		init: init,
+		init: init
 	};
 
 })();
