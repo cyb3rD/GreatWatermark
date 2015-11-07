@@ -50,7 +50,7 @@ var upload = (function() {
 		    var form = $('#parent-img'),
 	            url = 'php/upload.php',
 	            data = form.serialize();
-	            console.log(data);
+	            console.log(form);
 
 	        // ajax
 	        $.ajax({
@@ -122,7 +122,7 @@ var upload = (function() {
 
 	// Возвращаем объект (публичные методы)
 	return {
-		init: init,
+		init: init
 	};
 
 })();
