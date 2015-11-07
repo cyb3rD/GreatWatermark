@@ -1,81 +1,60 @@
-//- -------------------- SOCIAL SHARING AND LAGUAGE !!!START!!!-------------------- -//
-.socials__box {
-  position: fixed;
-  top: 42px;
-}
-
-.language__list {
-  margin-bottom: 18px;
-}
-.language__link {
-  border-radius: 0 5px 5px 0;
-  font-family: "SegoeUILight";
-  color: #8e9298;
-  background: #d6d4d7;
-  display: block;
-  margin-bottom: 1px;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 3px;
-    &.active {
-      color: #d6d4d7;
-      background: #b2b0b2;
-    }
-}
-
-// -----sharing-------
-.sharing__box {
-  position: absolute;
-  left: -43px;
-  transition: 0.5s;
-  &:hover {
-    left: 0;
-  }
-}
-.sharing__list {
-  position: absolute;
-  left: 0;
-}
-.sharing__item {
-  list-style: none;
-  background: #d6d4d7;
-  padding: 4.5px 5.5px;
-}
-.sharing__link {
-  width: 43px;
-  height: 41px;
-  display: block;
-  position: relative;
-}
-
-$socials: fb, vk, tw;
-$socials-map: sprite-map("socials/*.png", $spacing: 70px);
-
-.like__link {
-  background: #d6d4d7;
-  padding: 4.5px 5.5px;
-  position: absolute;
-  border-radius: 0 5px 5px 0;
-  top: 0;
-  left: 42px;
-  .like__icon {
-    @include get-sprite($socials-map, social-like);
-    &:hover {
-      @include get-sprite($socials-map, social-like-on);
-    }
-  }
-}
-
-@each $social in $socials {
-  .sharing__link_#{$social} {
-    $social: 'social-' + $social;
-    @include get-sprite($socials-map, $social);
-
-    &:hover {
-      $icon-name: $social + '-on';
-      @include get-sprite($socials-map, $icon-name);
-      transform: rotate(360deg);
-      transition-duration: .7s;
-    }
-  }
-}
+// //- -------------------- SOCIAL SHARING AND LAGUAGE !!!START!!!-------------------- -//
+// .socials__box {
+//   position: fixed;
+//   top: 42px;
+// }
+//
+// .language__list {
+//   margin-bottom: 18px;
+// }
+// .language__link {
+//   border-radius: 0 5px 5px 0;
+//   font-family: "SegoeUILight";
+//   color: #8e9298;
+//   background: #d6d4d7;
+//   display: block;
+//   margin-bottom: 1px;
+//   text-decoration: none;
+//   font-size: 20px;
+//   padding: 3px;
+//     &.active {
+//       color: #d6d4d7;
+//       background: #b2b0b2;
+//     }
+// }
+//
+// // -----sharing-------
+// .sharing__box {
+//   position: absolute;
+//   left: -43px;
+//   transition: 0.5s;
+//   &:hover {
+//     left: 0;
+//   }
+// }
+// .sharing__list {
+//   position: absolute;
+//   left: 0;
+// }
+// .sharing__item {
+//   list-style: none;
+//   background: #d6d4d7;
+//   padding: 4.5px 5.5px;
+// }
+// .sharing__link {
+//   width: 43px;
+//   height: 41px;
+//   display: block;
+//   position: relative;
+// }
+//
+//
+//     &:hover {
+//       $icon-name: $social + '-on';
+//       @include get-sprite($socials-map, $icon-name);
+//       transform: rotate(360deg);
+//       transition-duration: .7s;
+//     }
+//   }
+// }
+// //- -------------------- SOCIAL SHARING AND LAGUAGE !!!END!!!-------------------- -//
