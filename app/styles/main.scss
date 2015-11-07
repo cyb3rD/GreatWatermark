@@ -156,7 +156,7 @@
   position: relative;
   width: 220px;
   padding: 20px;
-  //padding-bottom: 30px;
+  padding-bottom: 30px;
   border-bottom: 1px solid red;
   &:after {
     content:"";
@@ -483,8 +483,8 @@
   color: #f6931f;
   font-weight: bold;
   background-color: transparent;
-  right: -90px;
-  top: 20px;
+  right: -28px;
+  top: 6px;
 }
 
 
@@ -603,7 +603,6 @@
   transform: rotate(-360deg);
   transition-duration: .7s;
 }
-
 
 
 /*  Sprite Social  */

@@ -7,7 +7,7 @@ var gulp = require("gulp"),
 // paths & settings
 var paths = {
 	browserSync : {
-		serverPort 	: 9000,
+		serverPort 	: 3000,
 		baseDir 	: 'app',
 		watchPaths 	: ['*.html', 'css/*.css', 'js/*.js']
 	},

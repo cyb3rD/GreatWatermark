@@ -21,6 +21,7 @@
 		<!-- endbuild-->
 		<!-- Подключаем стили CSS для библиотеки Jquery UI-->
 		<link href="bower/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://vk.com/js/api/share.js?93" charset="windows-1251"></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -150,13 +151,10 @@
 				</div>
 			</div>
 			<footer class="footer">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</footer>
+			<div id="fb-root"></div>
 			<div class="extra-block">
 				<div class="extra-block__item sprite sprite-social-like"></div>
-				<div class="extra-block__item__social">
-					<div class="extra-block__item__social_tw sprite sprite-social-tw"></div>
-					<div class="extra-block__item__social_fb sprite sprite-social-fb"></div>
-					<div class="extra-block__item__social_vk sprite sprite-social-vk"></div>
-				</div>
+				<div class="extra-block__item__social"><a href="https://twitter.com/intent/tweet?button_hashtag=TwitterStories" class="extra-block__item__social_tw sprite sprite-social-tw"></a><a data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon_link" class="fb-share-button extra-block__item__social_fb sprite sprite-social-fb"></a><a href="http://vk.com/share.php?url=http%3A%2F%2Flocalhost%3A3000%2F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(0, this);" class="extra-block__item__social_vk sprite sprite-social-vk"></a></div>
 			</div>
 		</div>
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
@@ -166,6 +164,7 @@
 		<script type="text/javascript" src="js/place.js"></script>
 		<script type="text/javascript" src="js/opacity.js"></script>
 		<script type="text/javascript" src="js/upload.js"></script>
+		<script type="text/javascript" src="js/socials.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/language.js"></script>
 		<script type="text/javascript" src="js/imgValid.js"></script>
