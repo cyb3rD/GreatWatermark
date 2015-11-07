@@ -30,16 +30,21 @@ function rus2translit($string)
         'Ь' => '*', 'Ы' => 'Y', 'Ъ' => '*',
         'Э' => 'E', 'Ю' => 'Yu', 'Я' => 'Ya',
     );
-    return strtr($string, $converter);
+    
+    return strtr($string[0], $converter);
 }
 
-if ($_SERVER['REQUEST_METHOD' == 'POST']) {
+
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
 
     $allowed = array('png', 'jpg', 'gif');
-
-    if (isset($_FILES['upl']) && $_FILES['upl']['error'] == 0) {
-
-        $extension = pathinfo($_FILES['upl']['name'], PATHINFO_EXTENSION);
+    
+    if (isset($_FILES['files']) && key($_FILES['files']['error']) == 0) {
+        
+        //$extension = pathinfo($_FILES['files']['name'], PATHINFO_EXTENSION);
 
         $inputName = key($_FILES);
         print_r($_POST['fileurl']);
@@ -50,10 +55,12 @@ if ($_SERVER['REQUEST_METHOD' == 'POST']) {
         $uploadFileName = $file['name'];
         $uploadFile = $file['tmp_name'];
         $uploadFileName = rus2translit($uploadFileName);
-        $destination = '../images/upload' . $uploadFileName;
-        $imageSizes = getimagesize($uploadFile);
+        $destination = '../img/upload/' . $uploadFileName;
 
-        WideImage::loadFromFile($uploadFile)->saveToFile($destination);
+        $imageSizes = getimagesize($uploadFile[0]);
+
+        WideImage::loadFromFile($uploadFile[0])->saveToFile($destination);
+        
 
         $data = [
             "width" => $imageSizes[0],
@@ -63,7 +70,8 @@ if ($_SERVER['REQUEST_METHOD' == 'POST']) {
             "fileName" => $uploadFileName,
             "status" => "OK"
         ];
-
+        
+        
         echo json_encode($data);
         exit;
     }

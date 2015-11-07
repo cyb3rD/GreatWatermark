@@ -11,15 +11,12 @@ var upload = (function() {
 			},
 
 			done: function(e, data) {
-				var img = $('.test-img');
-					//uploadImg = data.result.files[0];
+				var img = $('.upload-img'),
+					uploadImg = data["result"];
 
-				//$('.upload-img').text(uploadImg.name);
-
-				img.attr('src', 'http://lorempixel.com/200/200/');
-				
-				img.appendTo('.upload-img');
-			}	
+				console.log(uploadImg);
+				img.attr('background', '');
+			}
 
 		});
 
