@@ -15,6 +15,7 @@ var upload = (function() {
 					//uploadImg = data.result.files[0];
 
 				//$('.upload-img').text(uploadImg.name);
+
 				img.attr('src', 'http://lorempixel.com/200/200/');
 				
 				img.appendTo('.upload-img');
@@ -22,7 +23,9 @@ var upload = (function() {
 
 		});
 
-
+		$('.upload-img').draggable({
+		   containment:'parent'
+		});
 		_setUpListeners();
 	};
 

@@ -24,9 +24,6 @@ var changePlace = (function () {
 			cX = img.position().left,
 			cY = img.position().top;
 		//$(".position__grid_item").removeClass('active');
-		
-
-
 	}
 
 	// Устанавливаем прослушку
@@ -37,8 +34,20 @@ var changePlace = (function () {
 		$('.position__control__y_point-top').on('click', _increaseY); // При клике верх (по Y)
 		$('.position__control__y_point-bottom').on('click', _lowerY); // При клике вниз (по Y)
 		$('.position__grid_item').on('click', _placeImg); // При клике радио #1 
+		$('.upload-img').on('mousemove', _followPos); // При драге вотермарка
 		
 	};
+
+	// При драге вотермарка отслеживать позицию в спиннерах
+	var _followPos = function(e) {
+		console.log('Im in movestart');
+		var $this = $(this),
+			boxTextX = $('#value__x_point'),
+			boxTextY = $('#value__y_point');
+		boxTextX.val($this.position().left);
+		boxTextY.val($this.position().top);
+	}
+
 
 	// При клике верх по X меняем значение в боксе, смещаем картинку по X вправо 
 	var _increaseX = function(e) {
