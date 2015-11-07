@@ -11,19 +11,43 @@ var upload = (function() {
 			},
 
 			done: function(e, data) {
-				var img = $('.upload-img'),
-					uploadImg = data["result"];
-
-				console.log(uploadImg);
-				img.attr('background', '');
+				var main_img = '<div class="canvas__main-img"></div>',
+					canvas = $("#canvas"),
+					props = $.parseJSON(data["result"]);
+				canvas.append(main_img);
+				main_img = $(".canvas__main-img");
+				main_img.css("background", "url(" + props.path+")");
+				main_img.css("width", props.width + "px");
+				main_img.css("height", props.height + "px");
+				main_img.css("border", "1px solid black");
+				canvas.append(main_img);
 			}
-
 		});
 
-		$('.upload-img').draggable({
-		   containment:'parent'
-		});
-		_setUpListeners();
+		$('#water_img').fileupload({
+		    url: 'php/upload.php',
+		    
+		    add: function(e, data) {
+		    	data.submit();
+			},
+
+			done: function(e, data) {
+				var water_img = '<div class="canvas__img upload-img"></div>',
+					canvas = $("#canvas"),
+					props = $.parseJSON(data["result"]);
+				canvas.append(water_img);
+				water_img = $(".canvas__img");
+				water_img.css("background", "url(" + props.path+")");
+				water_img.css("width", props.width + "px");
+				water_img.css("height", props.height + "px");
+				water_img.css("border", "1px solid black");
+				canvas.append(water_img);
+				$('.upload-img').draggable({
+				   containment:'parent'
+				});
+				changePlace.init();
+			}
+		});		_setUpListeners();
 	};
 
 	// Установка прослушки
