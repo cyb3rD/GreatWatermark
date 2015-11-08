@@ -5,16 +5,14 @@ require_once 'plugins/autoload.php';
 
 $result = '../img/result.jpg';
 
-
-
 $opacity = $_POST['opacity'];
 $deltaX = $_POST['deltaX'];
 $deltaY = $_POST['deltaY'];
+$koef = $_POST['koef'];
 $tiling = $_POST['tiling'];
 
 $watermark = WideImage::loadFromFile($_POST['watermark']);
 $image = WideImage::loadFromFile($_POST['image']);
-
 
 $sizeImg = getimagesize($_POST['image']);
 $sizeWt = getimagesize($_POST['watermark']);
@@ -41,9 +39,11 @@ if($tiling) {
     }
     $new -> saveToFile($result);
 } else {
-    
-    $new = $image->merge($watermark, 'left + ' . $deltaX, 'top+' . $deltaY, $opacity);
+
+    $new = $image->merge($watermark, $deltaX * $koef, $deltaY * $koef, $opacity);
     $new -> saveToFile($result);
+
+
 }
 
 

@@ -45,16 +45,18 @@ var upload = (function() {
 			done: function(e, data) {
 				var water_img = '<div class="canvas__img upload-img"></div>',
 					canvas = $("#canvas"),
+					main_img = $(".canvas__main-img"),
 					props = $.parseJSON(data["result"]);
-				canvas.append(water_img);
+				main_img.append(water_img);
 
 				water_img = $(".canvas__img");
 				water_img.attr('data-path', props.path);
+				water_img.attr('data-koef', k);
 				water_img.css("background", "url(" + props.path+")");
 				water_img.css("width", props.width / k + "px");
 				water_img.css("height", props.height / k + "px");
 				water_img.css("background-size", "100%");
-				canvas.append(water_img);
+				main_img.append(water_img);
 				$('.upload-img').draggable({
 				   containment:'parent'
 				});

@@ -20,11 +20,11 @@ var download = (function () {
 				image = $('.canvas__main-img'),
 				cX = watermark.position().left,
 				cY = watermark.position().top,
+				k = watermark.attr('data-koef'),
 				op = $( "#slider-opacity" ).slider( "value" ),
-				data = {'opacity': op, 'deltaX': cX, 'deltaY': cY, 'image': image.attr('data-path'),'watermark': watermark.attr('data-path') };
-		
+				data = {'opacity': op, 'deltaX': cX, 'deltaY': cY, 'image': image.attr('data-path'),'watermark': watermark.attr('data-path'), 'koef': k };
 		console.log("Качаем!");
-
+		console.log(k);
 
 		$.ajax({
             url: 'php/getimage.php',
@@ -38,8 +38,8 @@ var download = (function () {
             console.log('Проблемы в PHP');
             console.log(ans);
         });
-
         window.open('../img/result.jpg');
+        
 	};
 
 
