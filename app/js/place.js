@@ -64,8 +64,8 @@ var changePlace = (function () {
 			img = $('.canvas__img'),
 			cX = img.position().left + 1;
 			imgWidth = img.width(),
-			canvasWidth = $('.canvas__block').width();
-		if (cX + imgWidth <= canvasWidth) {
+			mainWidth = $('.canvas__main-img').width();
+		if (cX + imgWidth <= mainWidth) {
 			boxText.val(cX);
 			img.css("left", cX + "px");
 		};
@@ -90,8 +90,8 @@ var changePlace = (function () {
 			img = $('.canvas__img'),
 			cY = img.position().top + 1,
 			imgHeight = img.height(),
-			canvasHeight = $('.canvas__block').height();
-		if (cY + imgHeight <= canvasHeight) {
+			mainHeight = $('.canvas__main-img').height();
+		if (cY + imgHeight <= mainHeight) {
 			boxText.val(cY);
 			img.css("top", cY + "px");
 		};
