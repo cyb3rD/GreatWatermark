@@ -14,12 +14,13 @@ var download = (function () {
 	
 	// Меняем прозрачность
 	var _sendCoords = function(e) {
+
 		e.preventDefault();
 			var watermark = $('.canvas__img'),
 				image = $('.canvas__main-img'),
 				cX = watermark.position().left,
 				cY = watermark.position().top,
-				op = $( "#slider-opacity" ).slider( "value" ) / 100,
+				op = $( "#slider-opacity" ).slider( "value" ),
 				data = {'opacity': op, 'deltaX': cX, 'deltaY': cY, 'image': image.attr('data-path'),'watermark': watermark.attr('data-path') };
 		
 		console.log("Качаем!");
@@ -37,7 +38,10 @@ var download = (function () {
             console.log('Проблемы в PHP');
             console.log(ans);
         });
+
+        window.open('../img/result.jpg');
 	};
+
 
 
 	return {
