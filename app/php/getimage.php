@@ -3,22 +3,31 @@ use WideImage\WideImage;
 
 require_once 'plugins/autoload.php';
 
-$result = '../images/result.jpg';
+$result = '../img/result.jpg';
+
+
 
 $opacity = $_POST['opacity'];
 $deltaX = $_POST['deltaX'];
 $deltaY = $_POST['deltaY'];
 $tiling = $_POST['tiling'];
-$image = WideImage::load($_POST['image']);
-$watermark = WideImage::load($_POST['watermark']);
+
+$watermark = WideImage::loadFromFile($_POST['watermark']);
+$image = WideImage::loadFromFile($_POST['image']);
+
+
 $sizeImg = getimagesize($_POST['image']);
 $sizeWt = getimagesize($_POST['watermark']);
+
+
+
 $marginX = $_POST['marginX'];
 $marginY = $_POST['marginY'];
 $lengthX = $marginY;
 $lengthY = $marginX;
 $i = 0;
 $j = 0;
+
 
 if($tiling) {
     $new = $image->merge($watermark, 'left + 0', 'top + 0', 0);
@@ -32,6 +41,7 @@ if($tiling) {
     }
     $new -> saveToFile($result);
 } else {
+    
     $new = $image->merge($watermark, 'left + ' . $deltaX, 'top+' . $deltaY, $opacity);
     $new -> saveToFile($result);
 }

@@ -16,6 +16,7 @@ var upload = (function() {
 				var main_img = '<div class="canvas__main-img"></div>',
 					canvas = $("#canvas"),
 					props = $.parseJSON(data["result"]);
+
 				canvas.append(main_img);
 				main_img = $(".canvas__main-img");
 				kw = props.width / canvas.width();
@@ -26,6 +27,7 @@ var upload = (function() {
 					k = kh;
 				};
 
+				main_img.attr('data-path', props.path);
 				main_img.css("height", props.height / k + "px");
 				main_img.css("width", props.width / k + "px");	
 				main_img.css("background", "url(" + props.path+")");
@@ -45,7 +47,9 @@ var upload = (function() {
 					canvas = $("#canvas"),
 					props = $.parseJSON(data["result"]);
 				canvas.append(water_img);
+
 				water_img = $(".canvas__img");
+				water_img.attr('data-path', props.path);
 				water_img.css("background", "url(" + props.path+")");
 				water_img.css("width", props.width / k + "px");
 				water_img.css("height", props.height / k + "px");
