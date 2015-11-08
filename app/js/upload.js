@@ -2,9 +2,16 @@ var upload = (function() {
 
 	//	Иницализация модуля
 	var init = function() {
-		var kw = 0,
-			kh = 0,
-			k = 1;
+		_initializeUploads();
+	};
+
+	// Инициализируем аплоуды
+	var _initializeUploads = function() {
+		var kw = 1, // Объявляем коэффициент ширины
+			kh = 1, // Объявляем коэффициент высоты
+			k = 1;	// Объявляем общий коэффициент
+		
+		// Инициализируем аплоуд фонового изображения
 		$('#main_img').fileupload({
 		    url: 'php/upload.php',
 		    
@@ -13,28 +20,31 @@ var upload = (function() {
 			},
 
 			done: function(e, data) {
-				var main_img = '<div class="canvas__main-img"></div>',
-					canvas = $("#canvas"),
-					props = $.parseJSON(data["result"]);
-
-				canvas.append(main_img);
+				var main_img = '<div class="canvas__main-img"></div>', // Создаём фоновое изображение
+					canvas = $("#canvas"),  // Находим канвас
+					props = $.parseJSON(data["result"]); // Превращаем возвращаемый с бэка результат в доступный вид
+					filename = $("#main_img_name"), // Находим инпут для выведения имени файла
+					name = props.fileName; // Находим имя файла
+				filename.val(name); // Задаём в инпут имя файла
+				canvas.append(main_img);  
 				main_img = $(".canvas__main-img");
-				kw = props.width / canvas.width();
-				kh = props.height / canvas.height();
-				if (kw > kh) {
+				kw = props.width / canvas.width(); // Считаем ширину
+				kh = props.height / canvas.height(); // и высоту 
+				if (kw > kh) { // Выбираем больший коэффициент
 					k = kw;
 				} else {
 					k = kh;
 				};
 
-				main_img.attr('data-path', props.path);
-				main_img.css("height", props.height / k + "px");
-				main_img.css("width", props.width / k + "px");	
-				main_img.css("background", "url(" + props.path+")");
-				main_img.css("background-size", "100%");			
+				main_img.attr('data-path', props.path); // Записываем путь к файлу в атрибут тэга
+				main_img.css("height", props.height / k + "px"); // Ресайзим высоту
+				main_img.css("width", props.width / k + "px");	 // Расайзим ширину
+				main_img.css("background", "url(" + props.path+")");  // Задаём бэкграунд
+				main_img.css("background-size", "100%");  // Умещаем картинку в размеры
 			}	
 		});
 
+		// Инициализируем аплоуд вотермарка
 		$('#water_img').fileupload({
 		    url: 'php/upload.php',
 		    
@@ -46,9 +56,11 @@ var upload = (function() {
 				var water_img = '<div class="canvas__img upload-img"></div>',
 					canvas = $("#canvas"),
 					main_img = $(".canvas__main-img"),
-					props = $.parseJSON(data["result"]);
+					props = $.parseJSON(data["result"]),
+					filename = $("#water_img_name"),
+					name = props.fileName;
+				filename.val(name);					 
 				main_img.append(water_img);
-
 				water_img = $(".canvas__img");
 				water_img.attr('data-path', props.path);
 				water_img.attr('data-koef', k);
@@ -56,45 +68,15 @@ var upload = (function() {
 				water_img.css("width", props.width / k + "px");
 				water_img.css("height", props.height / k + "px");
 				water_img.css("background-size", "100%");
-				main_img.append(water_img);
-				$('.upload-img').draggable({
-				   containment:'parent'
+				main_img.append(water_img);  // Запираем вотермарк в фоновом изображении
+				$('.upload-img').draggable({	// Делаем его "дрэггэбл"
+				   containment:'parent'	// Запираем дрэг в родительском элементе
 				});
-				changePlace.init();
+				changePlace.init(); // Инициализируем модуль 
 			}
 		});
+	}
 
-		
-		_setUpListeners();
-	};
-
-	// Установка прослушки
-	var _setUpListeners = function() { 
-		$('#main_img').on('change', _showMainPath); // Показываем путь для main image
-		$('#water_img').on('change', _showWaterPath); // Показываем путь для main image
-	};
-
-	// Показываем путь для main image
-	var _showMainPath = function(e) {
-		e.preventDefault();
-		
-		var filename = $("#main_img_name"),
-			path = $("#main_img").val().replace(/\\/g, '/').replace(/.*\//, '');
-		
-		filename.val(path); 
-
-	};
-
-	// Показываем путь для вотермарка
-	var _showWaterPath = function(e) {
-		e.preventDefault();
-		
-		var filename = $("#water_img_name"),
-			path = $("#water_img").val().replace(/\\/g, '/').replace(/.*\//, '');
-		
-		filename.val(path); 
-		
-	};
 	
 	// Возвращаем объект (публичные методы)
 	return {

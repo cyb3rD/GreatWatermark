@@ -12,31 +12,27 @@ var download = (function () {
 
 	}	
 	
-	// Меняем прозрачность
+	// Отправляем координаты
 	var _sendCoords = function(e) {
-
 		e.preventDefault();
-			var watermark = $('.canvas__img'),
+			var watermark = $('.canvas__img'), 
 				image = $('.canvas__main-img'),
 				cX = watermark.position().left,
 				cY = watermark.position().top,
-				k = watermark.attr('data-koef'),
-				op = $( "#slider-opacity" ).slider( "value" ),
-				data = {'opacity': op, 'deltaX': cX, 'deltaY': cY, 'image': image.attr('data-path'),'watermark': watermark.attr('data-path'), 'koef': k };
-		console.log("Качаем!");
-		console.log(k);
+				k = watermark.attr('data-koef'), // вытаскиваем коэффициент ресайза
+				op = $( "#slider-opacity" ).slider( "value" ), // вытаскиваем прозрачность
+				data = {'opacity': op, 'deltaX': cX, 'deltaY': cY, 'image': image.attr('data-path'),'watermark': watermark.attr('data-path'), 'koef': k }; // задаём дата для отправки на бэк
 
+		// Отправляем ajax запрос с данными для получения пути к результату
 		$.ajax({
             url: 'php/getimage.php',
             type: 'POST',
             dataType: 'json',
             data: data,
-        }).done( function(result) {
-            console.log('Выполнено!');
-            console.log(result);
+        }).done( function() {
+        	
         }).fail( function(ans) {
             console.log('Проблемы в PHP');
-            console.log(ans);
         });
         window.open('../img/result.jpg');
         

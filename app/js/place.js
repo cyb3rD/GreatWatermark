@@ -40,8 +40,9 @@ var changePlace = (function () {
 	
 	// Меняем прозрачность
 	var _changeOpacity = function(e) {
+		var op = $( "#slider-opacity" ).slider( "value" ) / 100;
 		if ($('.canvas__img')) {
-			$('.canvas__img').css('opacity', $( "#slider-opacity" ).slider( "value" ) / 100);
+			$('.canvas__img').css('opacity', op);
 		}
 	};
 
@@ -108,7 +109,7 @@ var changePlace = (function () {
 		};
 	};
 
-	// При клике радио #1 отправляю вотермарк в левый верхний угол
+	// При клике радио #1 отправляю вотермарк в левый верхний угол (ОСТОРОЖНО МАГИЯ!)
 	var _placeImg = function(e) {
 		e.preventDefault();
 		var img = $('.canvas__img'),
@@ -117,35 +118,39 @@ var changePlace = (function () {
 			$this = $(this);
 		$(".position__grid_item").removeClass('active');
 		$this.addClass('active');
+
+		// МАГИЧЕСКИЕ ВЫЧИСЛЕНИЯ
 		switch ($this.attr('id')) {
 			case '1':
 				img.css('top', 0).css('left',0);
 				break
 			case '2': 
-				img.css('top', 0).css('left', $('.canvas__block').width() / 2 - img.width() / 2 );
+				img.css('top', 0).css('left', $('.canvas__main-img').width() / 2 - img.width() / 2 );
 				break
 			case '3': 
-				img.css('top', 0).css('left', $('.canvas__block').width() - img.width());
+				img.css('top', 0).css('left', $('.canvas__main-img').width() - img.width());
 				break
 			case '4':
-				img.css('top', $('.canvas__block').height() / 2 - img.height() / 2).css('left',0);
+				img.css('top', $('.canvas__main-img').height() / 2 - img.height() / 2).css('left',0);
 				break
 			case '5': 
-				img.css('top', $('.canvas__block').height() / 2 - img.height() / 2).css('left', $('.canvas__block').width() / 2 - img.width() / 2 );
+				img.css('top', $('.canvas__main-img').height() / 2 - img.height() / 2).css('left', $('.canvas__main-img').width() / 2 - img.width() / 2 );
 				break
 			case '6': 
-				img.css('top', $('.canvas__block').height() / 2 - img.height() / 2).css('left', $('.canvas__block').width() - img.width());
+				img.css('top', $('.canvas__main-img').height() / 2 - img.height() / 2).css('left', $('.canvas__main-img').width() - img.width());
 				break
 			case '7':
-				img.css('top', $('.canvas__block').height() - img.height()).css('left',0);
+				img.css('top', $('.canvas__main-img').height() - img.height()).css('left',0);
 				break
 			case '8': 
-				img.css('top', $('.canvas__block').height() - img.height()).css('left', $('.canvas__block').width() / 2 - img.width() / 2 );
+				img.css('top', $('.canvas__main-img').height() - img.height()).css('left', $('.canvas__main-img').width() / 2 - img.width() / 2 );
 				break
 			case '9': 
-				img.css('top', $('.canvas__block').height() - img.height()).css('left', $('.canvas__block').width() - img.width());
+				img.css('top', $('.canvas__main-img').height() - img.height()).css('left', $('.canvas__main-img').width() - img.width());
 				break
 		}	
+
+		// Задаём значения в инпуты
 		boxTextX.val(img.position().left);
 		boxTextY.val(img.position().top);
 	}
@@ -154,7 +159,7 @@ var changePlace = (function () {
 
 	return {
 		init: init,
-		resetPos: restorePosDefault
+		resetPos: restorePosDefault // Функция сброса 
 	};
 })();
 
