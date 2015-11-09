@@ -7,6 +7,7 @@
     "normalize-css": "normalize.css#~3.0.3",
     "qtip2": "~2.2.1",
     "modernizr": "2.8.3",
-    "blueimp-file-upload": "jquery-file-upload#~9.11.2"
+    "blueimp-file-upload": "jquery-file-upload#~9.11.2",
+    "jquery-file-download": "~1.4.4"
   }
 }
