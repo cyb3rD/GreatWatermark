@@ -603,7 +603,15 @@
   transform: rotate(-360deg);
   transition-duration: .7s;
 }
-
+iframe[title="fb:share_button Facebook Social Plugin"]{
+  //visibility:hidden;
+  display: none;
+}
+.extra-block__item__social_fb:hover:hover iframe[title="fb:share_button Facebook Social Plugin"]{
+  //visibility:hidden;
+  display: block;
+  opacity: 0;
+}
 
 /*  Sprite Social  */
 .sprite {
