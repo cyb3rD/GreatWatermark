@@ -24,8 +24,8 @@ var validation = (function (){
 				event: 'show'
 			},
 			position: {
-				my: 'right center',
-				at: 'left center',
+				my: 'left center',
+				at: 'right center',
 			},
 			style: {
 				classes: 'qtip-mystyle qtip-rounded',
