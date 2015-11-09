@@ -17,7 +17,6 @@ var upload = (function() {
 		    
 		    add: function(e, data) {
 		    	if (validation.imageValid($('#main_img_name'),$(data))) {
-		    		$("#water_img").removeAttr("disabled");
 		    		data.submit();
 		    	}
 			},
