@@ -31,12 +31,13 @@ var download = (function () {
             type: 'POST',
             dataType: 'json',
             data: data,
+            success: function() {
+            	location.href = '../php/download.php';
+            }
         }).done( function() {
-        	
         }).fail( function(ans) {
             console.log('Проблемы в PHP');
         });
-        window.open('../img/result.jpg');
         }
 	};
 
