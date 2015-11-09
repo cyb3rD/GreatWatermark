@@ -62,17 +62,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         WideImage::loadFromFile($uploadFile[0])->saveToFile($destination);
         
 
-        $data = [
+        $data = array (
             "width" => $imageSizes[0],
             "height" => $imageSizes[1],
             "path" => $destination,
             "inputName" => $inputName,
             "fileName" => $uploadFileName,
             "status" => "OK"
-        ];
-        
+        );
         
         echo json_encode($data);
+        
         exit;
     }
 
