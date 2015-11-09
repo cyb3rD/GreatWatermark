@@ -35,7 +35,7 @@ var changePlace = (function () {
 		$('.position__control__y_point-bottom').on('click', _lowerY); // При клике вниз (по Y)
 		$('.position__grid_item').on('click', _placeImg); // При клике радио #1 
 		$('.upload-img').on('drag', _followPos); // При драге вотермарка
-		$('.ui-slider-handle').on('drag', _changeOpacity); // Меняем прозрачность
+		$('.ui-slider-handle').on('mousemove', _changeOpacity); // Меняем прозрачность
 	}	
 	
 	// Меняем прозрачность
