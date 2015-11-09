@@ -5,7 +5,7 @@ $(document).ready(function(){
   $(function() {
     $( "#slider-opacity" ).slider({
       range: "min",
-      value: 49,
+      value: 100,
       min: 0,
       max: 100,
       slide: function( event, ui ) {
@@ -18,9 +18,9 @@ $(document).ready(function(){
   /*  Reset Button  */
   $("#reset").click(function(){
     $("#parent-img")[0].reset();
-    $("#sliderAmount").val('49');
-    $("#slider-opacity div").css({'width':'49%'});
-    $("#slider-opacity span").css({'left':'49%'});
+    $("#sliderAmount").val('100');
+    $("#slider-opacity div").css({'width':'100%'});
+    $("#slider-opacity span").css({'left':'100%'});
     $("#value__x_point").val('0');
     $("#value__y_point").val('0');
     changePlace.resetPos();

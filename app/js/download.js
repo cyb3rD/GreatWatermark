@@ -15,6 +15,7 @@ var download = (function () {
 	// Отправляем координаты
 	var _sendCoords = function(e) {
 		e.preventDefault();
+		if (validation.checkfields()) {
 			var watermark = $('.canvas__img'), 
 				image = $('.canvas__main-img'),
 				cX = watermark.position().left,
@@ -22,6 +23,7 @@ var download = (function () {
 				k = watermark.attr('data-koef'), // вытаскиваем коэффициент ресайза
 				op = $( "#slider-opacity" ).slider( "value" ), // вытаскиваем прозрачность
 				data = {'opacity': op, 'deltaX': cX, 'deltaY': cY, 'image': image.attr('data-path'),'watermark': watermark.attr('data-path'), 'koef': k }; // задаём дата для отправки на бэк
+		
 
 		// Отправляем ajax запрос с данными для получения пути к результату
 		$.ajax({
@@ -35,7 +37,7 @@ var download = (function () {
             console.log('Проблемы в PHP');
         });
         window.open('../img/result.jpg');
-        
+        }
 	};
 
 
@@ -46,5 +48,5 @@ var download = (function () {
 
 })();
 
-
 download.init();
+ 

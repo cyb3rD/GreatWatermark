@@ -34,8 +34,8 @@ var changePlace = (function () {
 		$('.position__control__y_point-top').on('click', _increaseY); // При клике верх (по Y)
 		$('.position__control__y_point-bottom').on('click', _lowerY); // При клике вниз (по Y)
 		$('.position__grid_item').on('click', _placeImg); // При клике радио #1 
-		$('.upload-img').on('mousemove', _followPos); // При драге вотермарка
-		$('.ui-slider-handle').on('mousemove', _changeOpacity); // Меняем прозрачность
+		$('.upload-img').on('drag', _followPos); // При драге вотермарка
+		$('.ui-slider-handle').on('drag', _changeOpacity); // Меняем прозрачность
 	}	
 	
 	// Меняем прозрачность
@@ -60,67 +60,82 @@ var changePlace = (function () {
 	// При клике верх по X меняем значение в боксе, смещаем картинку по X вправо 
 	var _increaseX = function(e) {
 		e.preventDefault();
-		var boxText = $('#value__x_point'),
-			img = $('.canvas__img'),
-			cX = img.position().left + 1;
-			imgWidth = img.width(),
-			mainWidth = $('.canvas__main-img').width();
-		if (cX + imgWidth <= mainWidth) {
-			boxText.val(cX);
-			img.css("left", cX + "px");
+		if (validation.checkfields()) {
+			var boxText = $('#value__x_point'),
+				img = $('.canvas__img'),
+				cX = img.position().left + 1;
+				imgWidth = img.width(),
+				mainWidth = $('.canvas__main-img').width();
+			if (cX + imgWidth <= mainWidth) {
+				boxText.val(cX);
+				img.css("left", cX + "px");
+			};
 		};
 	};
 
 	// При клике вниз по X меняем значение в боксе, смещаем картинку по X влево 
 	var _lowerX = function(e) {
 		e.preventDefault();
-		var boxText = $('#value__x_point'),
-			img = $('.canvas__img'),
-			cX = img.position().left - 1;
-		if (cX >= 0) {
-			boxText.val(cX);
-			img.css("left", cX + "px");
+		if (validation.checkfields()) {
+			var boxText = $('#value__x_point'),
+				img = $('.canvas__img'),
+				cX = img.position().left - 1;
+			if (cX >= 0) {
+				boxText.val(cX);
+				img.css("left", cX + "px");
+			};
 		};
 	};
 
 	// При клике вверх по Y меняем значение в боксе, смещаем картинку по Y вниз 
 	var _increaseY = function(e) {
 		e.preventDefault();
-		var boxText = $('#value__y_point'),
-			img = $('.canvas__img'),
-			cY = img.position().top + 1,
-			imgHeight = img.height(),
-			mainHeight = $('.canvas__main-img').height();
-		if (cY + imgHeight <= mainHeight) {
-			boxText.val(cY);
-			img.css("top", cY + "px");
+		if (validation.checkfields()) {
+			var boxText = $('#value__y_point'),
+				img = $('.canvas__img'),
+				cY = img.position().top + 1,
+				imgHeight = img.height(),
+				mainHeight = $('.canvas__main-img').height();
+			if (cY + imgHeight <= mainHeight) {
+				boxText.val(cY);
+				img.css("top", cY + "px");
+			};
 		};
 	};
 
 	// При клике вверх по Y меняем значение в боксе, смещаем картинку по Y вниз 
 	var _lowerY = function(e) {
 		e.preventDefault();
-		var boxText = $('#value__y_point'),
-			img = $('.canvas__img'),
-			cY = img.position().top - 1;
-		if (cY >= 0) {
-			boxText.val(cY);
-			img.css("top", cY + "px");
+		if (validation.checkfields()) {
+			var boxText = $('#value__y_point'),
+				img = $('.canvas__img'),
+				cY = img.position().top - 1;
+			if (cY >= 0) {
+				boxText.val(cY);
+				img.css("top", cY + "px");
+			};
 		};
 	};
 
 	// При клике радио #1 отправляю вотермарк в левый верхний угол (ОСТОРОЖНО МАГИЯ!)
 	var _placeImg = function(e) {
 		e.preventDefault();
-		var img = $('.canvas__img'),
+		if (validation.checkfields()) {
+			var img = $('.canvas__img'),
+				$this = $(this);
+			$(".position__grid_item").removeClass('active');
+			$this.addClass('active');
+			_magicCalculations($this);
+		};		
+	}
+	
+	var _magicCalculations = function($this) {
+		var button = $this,
+			img = $('.canvas__img'),
 			boxTextX = $('#value__x_point'),
-			boxTextY = $('#value__y_point'),
-			$this = $(this);
-		$(".position__grid_item").removeClass('active');
-		$this.addClass('active');
-
+			boxTextY = $('#value__y_point');
 		// МАГИЧЕСКИЕ ВЫЧИСЛЕНИЯ
-		switch ($this.attr('id')) {
+		switch (button.attr('id')) {
 			case '1':
 				img.css('top', 0).css('left',0);
 				break
@@ -149,12 +164,10 @@ var changePlace = (function () {
 				img.css('top', $('.canvas__main-img').height() - img.height()).css('left', $('.canvas__main-img').width() - img.width());
 				break
 		}	
-
 		// Задаём значения в инпуты
 		boxTextX.val(img.position().left);
 		boxTextY.val(img.position().top);
 	}
-	
 	
 
 	return {
@@ -163,6 +176,6 @@ var changePlace = (function () {
 	};
 })();
 
-if ($('.canvas__img').length) {
-	changePlace.init();
-};
+changePlace.init();
+
+
