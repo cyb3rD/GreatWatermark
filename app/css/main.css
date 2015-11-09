@@ -670,6 +670,7 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  min-width: 980px;
   min-height: 760px;
 }
 
@@ -680,7 +681,7 @@ p {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 960px;
+  max-width: 960px;
   height: 670px;
   background: #615c5f;
 }
@@ -697,7 +698,9 @@ p {
   position: relative;
   float: right;
   width: 260px;
+  max-width: 260px;
   height: 670px;
+  min-height: 670px;
   background: #f1f1f5;
 }
 
@@ -739,44 +742,44 @@ p {
 .control__opacity {
   position: relative;
   width: 220px;
+  min-width: 220px;
   padding: 20px;
   padding-bottom: 30px;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #f97e76;
 }
 .control__input-img:after,
 .control__position-img:after,
 .control__opacity:after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 0.01px;
   left: 0;
   right: 0;
-  bottom: -6px;
+  bottom: -10px;
   margin: auto;
-  border: 1px solid red;
-  border-top: 0px;
-  border-right: 0px;
-  background: #f1f1f5;
-  -moz-transform: rotate(-45deg);
-  /* Для Firefox */
-  -ms-transform: rotate(-45deg);
-  /* Для IE */
-  -webkit-transform: rotate(-45deg);
-  /* Для Safari, Chrome, iOS */
-  -o-transform: rotate(-45deg);
-  /* Для Opera */
-  transform: rotate(-45deg);
+  border-top: 10px solid #f97e76;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
 }
-
-.control__button {
-  position: relative;
-  width: 220px;
-  padding: 20px;
+.control__input-img:before,
+.control__position-img:before,
+.control__opacity:before {
+  position: absolute;
+  content: "";
+  width: 0.01px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -8px;
+  z-index: 10;
+  border-top: 10px solid #f1f1f5;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
 }
 
 .control__form__parent-img {
   display: inline-block;
+  margin-bottom: -15px;
 }
 
 .form__parent__title,
@@ -865,7 +868,7 @@ p {
 }
 
 .control__position__grid {
-  float: left;
+  display: inline-block;
   position: relative;
   width: 98px;
   height: 98px;
@@ -876,6 +879,7 @@ p {
 
 .position__grid_item {
   float: left;
+  display: inline-block;
   margin-left: 1px;
   margin-bottom: 1px;
   width: 32px;
@@ -896,10 +900,9 @@ p {
 
 .control__position__controls {
   vertical-align: top;
+  float: right;
   width: 100px;
   display: inline-block;
-  clear: both;
-  margin-left: 20px;
   text-align: right;
 }
 
@@ -911,7 +914,7 @@ p {
 .position__control_li {
   list-style: none;
   position: relative;
-  width: 100px;
+  min-width: 100px;
 }
 
 .position__control_x,
@@ -968,6 +971,7 @@ p {
   position: relative;
   width: 14px;
   height: 44px;
+  padding-left: 5px;
   border: 0px solid #9eb2c0;
   border-radius: 2px;
 }
@@ -1122,7 +1126,7 @@ p {
 
 .control__button {
   position: relative;
-  padding: 50px 10px 0 10px;
+  padding: 70px 10px 0 10px;
   width: 240px;
 }
 
@@ -1323,9 +1327,11 @@ iframe[title="fb:share_button Facebook Social Plugin"] {
 .qtip-content {
   color: #fff;
 }
+
 a[href="http://vk.com/share.php?url=file%3A%2F%2F%2FC%3A%2Fvp3%2FGreatWatermark%2Fapp%2Findex.html"] {
   display: none !important;
 }
+
 /* _____________ // тултипы _________ */
 .clearfix:after {
   clear: both;
