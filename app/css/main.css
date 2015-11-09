@@ -1323,7 +1323,9 @@ iframe[title="fb:share_button Facebook Social Plugin"] {
 .qtip-content {
   color: #fff;
 }
-
+a[href="http://vk.com/share.php?url=file%3A%2F%2F%2FC%3A%2Fvp3%2FGreatWatermark%2Fapp%2Findex.html"] {
+  display: none !important;
+}
 /* _____________ // тултипы _________ */
 .clearfix:after {
   clear: both;
