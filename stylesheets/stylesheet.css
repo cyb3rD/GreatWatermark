@@ -770,6 +770,24 @@ footer a:hover {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 
+li {
+  list-style: none;
+}
+
+
+.coder {
+  background-image: url('../images/cat-coder.png') ;
+}
+
+.gh-user {
+  margin-left: 0px;
+  padding-left: 35px;
+  padding-top: 20px;
+  background-repeat: no-repeat;
+  background-position: 0px center;
+}
+
+
 /* #Media Queries
 ================================================== */
 
