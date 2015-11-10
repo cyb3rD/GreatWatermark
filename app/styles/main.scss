@@ -80,6 +80,9 @@
   font-family: sans-serif;
   color: #2e3641;
 }
+body{
+  max-width: 1024px;
+}
 .wrap {
   //position: relative;
   position: absolute;
@@ -150,11 +153,9 @@
 
 .control__block {
   position: relative;
-  //max-height: 100%;
   top: 0;
   bottom: 0;
   padding-top: 30px;
-  //background: red;
 }
 .control__title {
   text-transform: uppercase;
@@ -580,8 +581,11 @@
 }
 
 
+.socials__box {
+  position: fixed;
+  top: 42px;
+}
 .extra-block__item {
-
   background: #d6d5d7;
   cursor: pointer;margin-bottom: 11px;
   border-radius: 0 5px 5px 0;
@@ -603,24 +607,29 @@
 .extra-block:hover .extra-block__item__social,
 .extra-block__item__social:hover {
   visibility: visible;
-  transform: translate(0px,-83px);
+  transform: translate(0px,-43px);
   transition-duration: .7s;
 }
-.extra-block__item__social_tw:hover,
-.extra-block__item__social_fb:hover,
-.extra-block__item__social_vk:hover {
+.sprite.sprite-social-tw:hover,
+.sprite.sprite-social-fb:hover,
+.sprite.sprite-social-vk:hover {
   transform: rotate(-360deg);
   transition-duration: .7s;
 }
-iframe[title="fb:share_button Facebook Social Plugin"]{
-  //visibility:hidden;
-  display: none;
-}
-.extra-block__item__social_fb:hover:hover iframe[title="fb:share_button Facebook Social Plugin"]{
-  //visibility:hidden;
-  display: block;
+/* Fix Socials Icons */
+.b-share-icon_twitter,
+.b-share-icon_facebook,
+.b-share-icon_vkontakte {
   opacity: 0;
+
 }
+.b-share-btn__twitter,
+.b-share-btn__facebook,
+.b-share-btn__vkontakte{
+  width: 40px;
+  height: 40px;
+}
+/* Fix Socials Icons */
 
 /*  Sprite Social  */
 .sprite {
@@ -678,10 +687,6 @@ iframe[title="fb:share_button Facebook Social Plugin"]{
 }
 
 
-.socials__box {
-  position: fixed;
-  top: 42px;
-}
 
 .language__list {
   margin-bottom: 45px;

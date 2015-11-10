@@ -21,7 +21,6 @@
 		<!-- endbuild-->
 		<!-- Подключаем стили CSS для библиотеки Jquery UI-->
 		<link href="bower/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
-		<!--script(type='text/javascript', src='http://vk.com/js/api/share.js?93', charset='UTF-8')-->
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -138,21 +137,21 @@
 				</div>
 			</div>
 			<footer lng="copypast" class="footer">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</footer>
-			<div id="fb-root">
-			</div>
 			<aside class="socials__box">
 				<ul class="language__list">
 					<li class="language__item"><a href="#" id="rus" class="language__link active">РУС</a></li>
 					<li class="language__item"><a href="#" id="eng" class="language__link">ENG</a></li>
 				</ul>
 				<div class="extra-block">
-					<div class="extra-block__item sprite sprite-social-like"></div>
-					<div class="extra-block__item__social"><a href="https://twitter.com/intent/tweet?button_hashtag=TwitterStories" class="extra-block__item__social_tw sprite sprite-social-tw"></a><a data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" class="fb-share-button extra-block__item__social_fb sprite sprite-social-fb"></a><a href="http://vk.com/share.php?url=http%3A%2F%2Flocalhost%3A3000%2F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(0, this);" class="extra-block__item__social_vk sprite sprite-social-vk"></a></div>
+					<div class="extra-block__item sprite sprite-social-like">
+						<div class="extra-block__item__social">
+							<div data-yashareType="none" data-yashareQuickServices="twitter" class="sprite sprite-social-tw yashare-auto-init"></div>
+							<div data-yashareType="none" data-yashareQuickServices="facebook" class="sprite sprite-social-fb yashare-auto-init"></div>
+							<div data-yashareType="none" data-yashareQuickServices="vkontakte" class="sprite sprite-social-vk yashare-auto-init"></div>
+						</div>
+					</div>
 				</div>
 			</aside>
-			
-			
-			
 		</div>
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="bower/qtip2/jquery.qtip.js"></script>
@@ -167,5 +166,6 @@
 		<script type="text/javascript" src="js/language.js"></script>
 		<script type="text/javascript" src="js/imgValid.js"></script>
 		<script type="text/javascript" src="js/download.js"></script>
+		<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
 	</body>
 </html>
