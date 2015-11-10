@@ -1,3 +1,13 @@
+@import "compass";
+
+@import "_misc/normalize";
+
+@import "_misc/mixins";
+
+@import "_misc/adjustment";
+
+@import "_misc/fonts";
+
 /* _____________ // file upload _________ */
 .new-project-form-upload-name {
   font-size:14px;
@@ -65,24 +75,14 @@
   margin:auto;
 }
 
-@import "compass";
-
-@import "_misc/normalize";
-
-@import "_misc/mixins";
-
-@import "_misc/adjustment";
-
-@import "_misc/fonts";
-
 
 * {
   font-family: sans-serif;
   color: #2e3641;
 }
-body{
-  max-width: 1024px;
-}
+// body{
+//   max-width: 1024px;
+// }
 .wrap {
   //position: relative;
   position: absolute;
@@ -580,7 +580,7 @@ body{
   color: #fff;
 }
 
-
+/*  */
 .socials__box {
   position: fixed;
   top: 42px;
