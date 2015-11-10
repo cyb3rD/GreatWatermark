@@ -1152,7 +1152,6 @@ p {
 .button_download {
   background: #f17a73;
   outline: none;
-  width: 100px;
 }
 .button_download:hover {
   background: #f85045;
