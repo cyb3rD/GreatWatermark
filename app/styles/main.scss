@@ -23,6 +23,11 @@
   margin-bottom:15px;
 }
 .fileupload-label{
+
+  &:hover {
+   cursor:pointer;
+  }
+
   display: block;
   width: 40px;
   height: 28px;
@@ -235,7 +240,6 @@
   margin-left: -5px;
   width: 39px;
   height: 27px;
-  font-style: 0;
   padding-top: 6px;
   background: #f97e76;
   border: 0;
@@ -262,7 +266,6 @@
   margin-left: -5px;
   width: 39px;
   height: 27px;
-  font-style: 0;
   padding-top: 6px;
   background: #f97e76;
   border: 0;
@@ -481,6 +484,7 @@
     outline:none;
   }
   &:hover:before{
+    cursor:pointer;
     content:"";
     position: absolute;
     width: 10px;
