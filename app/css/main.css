@@ -524,18 +524,18 @@ body {
   position: relative;
   min-height: 100%;
   min-width: 1130px;
-  /* ограничение ширины экрана*/
+  /* ╨╛╨│╤А╨░╨╜╨╕╤З╨╡╨╜╨╕╨╡ ╤И╨╕╤А╨╕╨╜╤Л ╤Н╨║╤А╨░╨╜╨░*/
   height: auto !important;
 }
 
-/* Прибъем футер к низу*/
+/* ╨Я╤А╨╕╨▒╤К╨╡╨╝ ╤Д╤Г╤В╨╡╤А ╨║ ╨╜╨╕╨╖╤Г*/
 .wrapper:after {
   content: "";
   height: 220px;
   display: block;
 }
 
-/* Общие классы */
+/* ╨Ю╨▒╤Й╨╕╨╡ ╨║╨╗╨░╤Б╤Б╤Л */
 .container {
   width: 1100px;
   margin: 0 auto;
@@ -582,6 +582,8 @@ p {
 .new-project-form-upload-name {
   font-size: 14px;
   margin-bottom: 8px;
+  max-height: 16px;
+  overflow: hidden;
 }
 
 .fileupload-wrapper {
@@ -601,9 +603,12 @@ p {
   background-color: #f97e76;
   border-radius: 0 4px 4px 0;
 }
+.fileupload-label:hover {
+  cursor: pointer;
+}
 
 .fileupload {
-  /* хак, взятый из html5boilerplate */
+  /* ╤Е╨░╨║, ╨▓╨╖╤П╤В╤Л╨╣ ╨╕╨╖ html5boilerplate */
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -687,11 +692,11 @@ p {
 }
 
 .wrap__inner__left {
-  position: relative;
   float: left;
   width: 650px;
   height: 620px;
   padding: 25px;
+  overflow: hidden;
 }
 
 .wrap__inner__right {
@@ -719,6 +724,9 @@ p {
   line-height: 40px;
   font-weight: 100;
   color: #fff;
+  max-height: 80px;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 /* Right block */
@@ -733,8 +741,11 @@ p {
   text-transform: uppercase;
   text-align: center;
   font-size: 26px;
-  margin-bottom: 10px;
+  line-height: 30px;
   color: #2e3641;
+  max-height: 30px;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 .control__input-img,
@@ -804,7 +815,6 @@ p {
   margin-left: -5px;
   width: 39px;
   height: 27px;
-  font-style: 0;
   padding-top: 6px;
   background: #f97e76;
   border: 0;
@@ -833,7 +843,6 @@ p {
   margin-left: -5px;
   width: 39px;
   height: 27px;
-  font-style: 0;
   padding-top: 6px;
   background: #f97e76;
   border: 0;
@@ -849,7 +858,7 @@ p {
 
 .control__position-img {
   position: relative;
-  /* Убираем выделение. Возникает при частых нажатияж на стрелки.*/
+  /* ╨г╨▒╨╕╤А╨░╨╡╨╝ ╨▓╤Л╨┤╨╡╨╗╨╡╨╜╨╕╨╡. ╨Т╨╛╨╖╨╜╨╕╨║╨░╨╡╤В ╨┐╤А╨╕ ╤З╨░╤Б╤В╤Л╤Е ╨╜╨░╨╢╨░╤В╨╕╤П╨╢ ╨╜╨░ ╤Б╤В╤А╨╡╨╗╨║╨╕.*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -858,13 +867,11 @@ p {
   user-select: none;
 }
 
-.control__title {
-  margin: 0;
-}
-
 .control__position__title {
   margin-bottom: 30px;
   text-align: center;
+  max-height: 16px;
+  overflow: hidden;
 }
 
 .control__position__grid {
@@ -991,13 +998,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(135deg);
-  /* Для Firefox */
+  /* ╨Ф╨╗╤П Firefox */
   -ms-transform: rotate(135deg);
-  /* Для IE */
+  /* ╨Ф╨╗╤П IE */
   -webkit-transform: rotate(135deg);
-  /* Для Safari, Chrome, iOS */
+  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
   -o-transform: rotate(135deg);
-  /* Для Opera */
+  /* ╨Ф╨╗╤П Opera */
   transform: rotate(135deg);
   cursor: pointer;
 }
@@ -1023,13 +1030,13 @@ p {
   border-right: 0px;
   background: #f1f1f5;
   -moz-transform: rotate(-45deg);
-  /* Для Firefox */
+  /* ╨Ф╨╗╤П Firefox */
   -ms-transform: rotate(-45deg);
-  /* Для IE */
+  /* ╨Ф╨╗╤П IE */
   -webkit-transform: rotate(-45deg);
-  /* Для Safari, Chrome, iOS */
+  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
   -o-transform: rotate(-45deg);
-  /* Для Opera */
+  /* ╨Ф╨╗╤П Opera */
   transform: rotate(-45deg);
   cursor: pointer;
 }
@@ -1073,6 +1080,7 @@ p {
   outline: none;
 }
 .ui-slider-handle.ui-state-default.ui-corner-all:hover:before {
+  cursor: pointer;
   content: "";
   position: absolute;
   width: 10px;
@@ -1122,6 +1130,8 @@ p {
 
 .opacity__title {
   padding-bottom: 20px;
+  max-height: 16px;
+  overflow: hidden;
 }
 
 .control__button {
@@ -1321,7 +1331,7 @@ p {
   background: #b2b0b2;
 }
 
-/* _____________ тултипы _________ */
+/* _____________ ╤В╤Г╨╗╤В╨╕╨┐╤Л _________ */
 .qtip-mystyle {
   background-color: #f97e76;
   border-color: #f97e76;
@@ -1338,7 +1348,7 @@ a[href="http://vk.com/share.php?url=file%3A%2F%2F%2FC%3A%2Fvp3%2FGreatWatermark%
   display: none !important;
 }
 
-/* _____________ // тултипы _________ */
+/* _____________ // ╤В╤Г╨╗╤В╨╕╨┐╤Л _________ */
 .clearfix:after {
   clear: both;
 }
