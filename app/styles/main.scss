@@ -1,3 +1,13 @@
+@import "compass";
+
+@import "_misc/normalize";
+
+@import "_misc/mixins";
+
+@import "_misc/adjustment";
+
+@import "_misc/fonts";
+
 /* _____________ // file upload _________ */
 .new-project-form-upload-name {
   font-size:14px;
@@ -65,22 +75,16 @@
   margin:auto;
 }
 
-@import "compass";
-
-@import "_misc/normalize";
-
-@import "_misc/mixins";
-
-@import "_misc/adjustment";
-
-@import "_misc/fonts";
-
 
 * {
   font-family: sans-serif;
   color: #2e3641;
 }
+// body{
+//   max-width: 1024px;
+// }
 .wrap {
+  //position: relative;
   position: absolute;
   top: 0;
   left: 0;
@@ -93,6 +97,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  min-width: 980px;
   min-height: 760px;
 }
 .wrap__inner {
@@ -102,7 +107,7 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 960px;
+  max-width: 960px;
   height: 670px;
   background: #615c5f;
 }
@@ -119,7 +124,9 @@
   position: relative;
   float: right;
   width: 260px;
+  max-width: 260px;
   height: 670px;
+  min-height: 670px;
   background: #f1f1f5;
 }
 
@@ -146,11 +153,9 @@
 
 .control__block {
   position: relative;
-  //max-height: 100%;
   top: 0;
   bottom: 0;
   padding-top: 30px;
-  //background: red;
 }
 .control__title {
   text-transform: uppercase;
@@ -164,37 +169,40 @@
 .control__opacity{
   position: relative;
   width: 220px;
+  min-width: 220px;
   padding: 20px;
   padding-bottom: 30px;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #f97e76;
   &:after {
     content:"";
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 0.01px;
     left: 0;
     right: 0;
-    bottom: -6px;
+    bottom: -10px;
     margin: auto;
-    border: 1px solid red;
-    border-top: 0px;
-    border-right: 0px;
-    background: #f1f1f5;
-    -moz-transform: rotate(-45deg); /* Для Firefox */
-    -ms-transform: rotate(-45deg); /* Для IE */
-    -webkit-transform: rotate(-45deg); /* Для Safari, Chrome, iOS */
-    -o-transform: rotate(-45deg); /* Для Opera */
-    transform: rotate(-45deg);
+    border-top: 10px solid #f97e76;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+  }
+  &:before {
+    position: absolute;
+    content:"";
+    width: 0.01px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -8px;
+    z-index: 10;
+    border-top: 10px solid #f1f1f5;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
   }
 }
-.control__button {
-  position: relative;
-  width: 220px;
-  padding: 20px;
-}
+
 .control__form__parent-img {
   display: inline-block;
-  //margin-bottom: 25px;
+  margin-bottom: -15px;
 }
 .form__parent__title,
 .form__child__title{
@@ -274,7 +282,8 @@
   text-align: center;
 }
 .control__position__grid {
-  float: left;
+  //float: left;
+  display: inline-block;
   position: relative;
   width: 98px;
   height: 98px;
@@ -284,6 +293,8 @@
 }
 .position__grid_item {
   float:left;
+  display: inline-block;
+  //position: relative;
   margin-left: 1px;
   margin-bottom: 1px;
   width: 32px;
@@ -303,11 +314,9 @@
 }
 .control__position__controls {
   vertical-align: top;
+  float: right;
   width: 100px;
   display: inline-block;
-  clear: both;
-  margin-left: 20px;
-  //margin-top: -17px;
   text-align: right;
 }
 .position__control_ul {
@@ -317,7 +326,7 @@
 .position__control_li {
   list-style: none;
   position: relative;
-  width: 100px;
+  min-width: 100px
 }
 
 .position__control_x,
@@ -370,6 +379,7 @@
   position: relative;
   width: 14px;
   height: 44px;
+  padding-left: 5px;
   border: 0px solid #9eb2c0;
   border-radius: 2px;
 }
@@ -509,7 +519,7 @@
 }
 .control__button {
   position: relative;
-  padding: 50px 10px 0 10px;
+  padding: 70px 10px 0 10px;
   width: 240px;
 }
 .control__button_reset {
@@ -531,7 +541,7 @@
 .button_download{
   background: #f17a73;
   outline:none;
-  width: 100px;
+  //width: 100px;
   &:hover{
     background: #f85045;
     outline:none;
@@ -570,9 +580,12 @@
   color: #fff;
 }
 
-
+/*  */
+.socials__box {
+  position: fixed;
+  top: 42px;
+}
 .extra-block__item {
-
   background: #d6d5d7;
   cursor: pointer;margin-bottom: 11px;
   border-radius: 0 5px 5px 0;
@@ -594,24 +607,29 @@
 .extra-block:hover .extra-block__item__social,
 .extra-block__item__social:hover {
   visibility: visible;
-  transform: translate(0px,-83px);
+  transform: translate(0px,-43px);
   transition-duration: .7s;
 }
-.extra-block__item__social_tw:hover,
-.extra-block__item__social_fb:hover,
-.extra-block__item__social_vk:hover {
+.sprite.sprite-social-tw:hover,
+.sprite.sprite-social-fb:hover,
+.sprite.sprite-social-vk:hover {
   transform: rotate(-360deg);
   transition-duration: .7s;
 }
-iframe[title="fb:share_button Facebook Social Plugin"]{
-  //visibility:hidden;
-  display: none;
-}
-.extra-block__item__social_fb:hover:hover iframe[title="fb:share_button Facebook Social Plugin"]{
-  //visibility:hidden;
-  display: block;
+/* Fix Socials Icons */
+.b-share-icon_twitter,
+.b-share-icon_facebook,
+.b-share-icon_vkontakte {
   opacity: 0;
+
 }
+.b-share-btn__twitter,
+.b-share-btn__facebook,
+.b-share-btn__vkontakte{
+  width: 40px;
+  height: 40px;
+}
+/* Fix Socials Icons */
 
 /*  Sprite Social  */
 .sprite {
@@ -669,10 +687,6 @@ iframe[title="fb:share_button Facebook Social Plugin"]{
 }
 
 
-.socials__box {
-  position: fixed;
-  top: 42px;
-}
 
 .language__list {
   margin-bottom: 45px;
@@ -702,6 +716,10 @@ iframe[title="fb:share_button Facebook Social Plugin"]{
 }
 .qtip-content {
   color: #fff;
+}
+
+a[href="http://vk.com/share.php?url=file%3A%2F%2F%2FC%3A%2Fvp3%2FGreatWatermark%2Fapp%2Findex.html"] {
+  display: none !important;
 }
 /* _____________ // тултипы _________ */
 
