@@ -19,7 +19,7 @@ $(document).ready(function(){
   $("#reset").click(function(){
     $("#parent-img")[0].reset();
     $("#sliderAmount").val('100');
-    $('.canvas__img').css($( "#slider-opacity" ).slider( "value" ));
+    $('.canvas__img').css('opacity','1');
     $("#slider-opacity div").css({'width':'100%'});
     $("#slider-opacity span").css({'left':'100%'});
     $("#value__x_point").val('0');
