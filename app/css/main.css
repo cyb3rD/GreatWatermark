@@ -582,6 +582,8 @@ p {
 .new-project-form-upload-name {
   font-size: 14px;
   margin-bottom: 8px;
+  max-height: 16px;
+  overflow: hidden;
 }
 
 .fileupload-wrapper {
@@ -867,6 +869,8 @@ p {
 .control__position__title {
   margin-bottom: 30px;
   text-align: center;
+  max-height: 16px;
+  overflow: hidden;
 }
 
 .control__position__grid {
@@ -1124,6 +1128,8 @@ p {
 
 .opacity__title {
   padding-bottom: 20px;
+  max-height: 16px;
+  overflow: hidden;
 }
 
 .control__button {

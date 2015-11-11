@@ -10,8 +10,11 @@
 
 /* _____________ // file upload _________ */
 .new-project-form-upload-name {
+  //display: block;
   font-size:14px;
   margin-bottom:8px;
+  max-height: 16px;
+  overflow: hidden;
 }
 .fileupload-wrapper {
   width: 220px;
@@ -284,6 +287,8 @@
 .control__position__title {
   margin-bottom: 30px;
   text-align: center;
+  max-height: 16px;
+  overflow: hidden;
 }
 .control__position__grid {
   //float: left;
@@ -520,6 +525,8 @@
 }
 .opacity__title {
   padding-bottom: 20px;
+  max-height: 16px;
+  overflow: hidden;
 }
 .control__button {
   position: relative;
