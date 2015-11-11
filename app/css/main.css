@@ -687,11 +687,11 @@ p {
 }
 
 .wrap__inner__left {
-  position: relative;
   float: left;
   width: 650px;
   height: 620px;
   padding: 25px;
+  overflow: hidden;
 }
 
 .wrap__inner__right {
@@ -719,6 +719,9 @@ p {
   line-height: 40px;
   font-weight: 100;
   color: #fff;
+  max-height: 80px;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 /* Right block */
@@ -733,8 +736,11 @@ p {
   text-transform: uppercase;
   text-align: center;
   font-size: 26px;
-  margin-bottom: 10px;
+  line-height: 30px;
   color: #2e3641;
+  max-height: 30px;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 .control__input-img,
@@ -856,10 +862,6 @@ p {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.control__title {
-  margin: 0;
 }
 
 .control__position__title {
