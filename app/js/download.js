@@ -36,7 +36,6 @@ var download = (function () {
             }
         }).done( function() {
         }).fail( function(ans) {
-            console.log('Проблемы в PHP');
         });
         }
 	};
