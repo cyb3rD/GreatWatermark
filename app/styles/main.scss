@@ -13,6 +13,7 @@
 .new-project-form-upload-name {
   //display: block;
   font-size:14px;
+  line-height: 16px;
   margin-bottom:8px;
   max-height: 16px;
   overflow: hidden;
@@ -603,9 +604,10 @@
 }
 .extra-block__item {
   background: #d6d5d7;
-  cursor: pointer;margin-bottom: 11px;
+  cursor: pointer;
+  margin-bottom: 11px;
   border-radius: 0 5px 5px 0;
-  transition-duration: .5s;
+  //transition-duration: .5s;
 }
 .extra-block__item__social {
   background: #d6d5d7;
