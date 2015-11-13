@@ -48,7 +48,6 @@ var changePlace = (function () {
 
 	// При драге вотермарка отслеживать позицию в спиннерах
 	var _followPos = function(e) {
-		console.log('Im in movestart');
 		var $this = $(this),
 			boxTextX = $('#value__x_point'),
 			boxTextY = $('#value__y_point');
@@ -140,25 +139,25 @@ var changePlace = (function () {
 				img.css('top', 0).css('left',0);
 				break
 			case '2': 
-				img.css('top', 0).css('left', $('.canvas__main-img').width() / 2 - img.width() / 2 );
+				img.css('top', 0).css('left', Math.round($('.canvas__main-img').width() / 2 - img.width() / 2) );
 				break
 			case '3': 
 				img.css('top', 0).css('left', $('.canvas__main-img').width() - img.width());
 				break
 			case '4':
-				img.css('top', $('.canvas__main-img').height() / 2 - img.height() / 2).css('left',0);
+				img.css('top', Math.round($('.canvas__main-img').height() / 2 - img.height() / 2)).css('left',0);
 				break
 			case '5': 
-				img.css('top', $('.canvas__main-img').height() / 2 - img.height() / 2).css('left', $('.canvas__main-img').width() / 2 - img.width() / 2 );
+				img.css('top', Math.round($('.canvas__main-img').height() / 2 - img.height() / 2)).css('left', Math.round($('.canvas__main-img').width() / 2 - img.width() / 2 ));
 				break
 			case '6': 
-				img.css('top', $('.canvas__main-img').height() / 2 - img.height() / 2).css('left', $('.canvas__main-img').width() - img.width());
+				img.css('top', Math.round($('.canvas__main-img').height() / 2 - img.height() / 2)).css('left', $('.canvas__main-img').width() - img.width());
 				break
 			case '7':
 				img.css('top', $('.canvas__main-img').height() - img.height()).css('left',0);
 				break
 			case '8': 
-				img.css('top', $('.canvas__main-img').height() - img.height()).css('left', $('.canvas__main-img').width() / 2 - img.width() / 2 );
+				img.css('top', $('.canvas__main-img').height() - img.height()).css('left', Math.round($('.canvas__main-img').width() / 2 - img.width() / 2 ));
 				break
 			case '9': 
 				img.css('top', $('.canvas__main-img').height() - img.height()).css('left', $('.canvas__main-img').width() - img.width());

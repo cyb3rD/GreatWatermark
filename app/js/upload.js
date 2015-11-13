@@ -34,6 +34,7 @@ var upload = (function() {
 				// Если до загрузки фона уже были вотермарки, удаляем
 				if ($(".canvas__img")) {
 					$(".canvas__img").remove();
+					opacity.reset();
 					$("#water_img_name").val('');
 				}
 				filename.val(name); // Задаём в инпут имя файла
@@ -61,14 +62,12 @@ var upload = (function() {
 		    
 		    add: function(e, data) {
 		    	if (validation.checkWaterMark($(data))) {
-		    		console.log('Загружаю!');
 		   			data.submit();
 		    	} 
 			},
 
 			done: function(e, data) {
 				var props = $.parseJSON(data["result"]);
-				console.log('Загружаю!');
 				if (validation.checkWaterSize(props.width / k, props.height / k)) {
 					_addWaterMark(props, k);
 				}
@@ -88,6 +87,7 @@ var upload = (function() {
 		// Если до загрузки вотермарка уже были вотермарки, удаляем
 		if ($(".canvas__img")) {
 			$(".canvas__img").remove();
+			opacity.reset();
 		}
 
 		filename.val(name);					 
