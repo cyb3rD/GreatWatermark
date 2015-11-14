@@ -581,6 +581,7 @@ p {
 /* _____________ // file upload _________ */
 .new-project-form-upload-name {
   font-size: 14px;
+  line-height: 16px;
   margin-bottom: 8px;
   max-height: 16px;
   overflow: hidden;
@@ -658,7 +659,7 @@ p {
 }
 
 * {
-  font-family: sans-serif;
+  font-family: SegoeUILight, sans-serif;
   color: #2e3641;
 }
 
@@ -675,7 +676,7 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-width: 980px;
+  min-width: 1060px;
   min-height: 760px;
 }
 
