@@ -1065,7 +1065,7 @@ p {
 .ui-slider-handle.ui-state-default.ui-corner-all {
   border-radius: 50px;
   border: 1px solid #dbe1e8;
-  background-color: #fff;
+  background-color: #DBE1E8;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   width: 22px;
@@ -1093,7 +1093,7 @@ p {
   left: 6px;
   outline: none;
 }
-.ui-slider-handle.ui-state-default.ui-corner-all:hover:before {
+.ui-slider-handle.ui-state-default.ui-corner-all:hover:before, .ui-slider-handle.ui-state-default.ui-corner-all:active:before {
   cursor: pointer;
   content: "";
   position: absolute;
@@ -1106,6 +1106,9 @@ p {
   top: 6px;
   left: 6px;
   outline: none;
+}
+.ui-slider-handle.ui-state-default.ui-corner-all:hover, .ui-slider-handle.ui-state-default.ui-corner-all:active {
+  background-color: #fff;
 }
 
 .ui-state-active,

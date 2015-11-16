@@ -466,7 +466,7 @@
 .ui-slider-handle.ui-state-default.ui-corner-all{
   border-radius: 50px;
   border: 1px solid #dbe1e8;
-  background-color: #fff;
+  background-color: #DBE1E8;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   width: 22px;
@@ -480,7 +480,6 @@
   -o-transition-property: background;
   -webkit-transition-property: background;
   transition-property: background;
-
   &:before{
     content:"";
     position: absolute;
@@ -494,7 +493,8 @@
     left: 6px;
     outline:none;
   }
-  &:hover:before{
+  &:hover:before,
+  &:active:before{
     cursor:pointer;
     content:"";
     position: absolute;
@@ -508,7 +508,11 @@
     left: 6px;
     outline:none;
   }
+  &:hover, &:active{
+    background-color: #fff;
+  }
 }
+
 .ui-state-active,
 .ui-widget-content.ui-state-active,
 .ui-widget-header.ui-state-active {
