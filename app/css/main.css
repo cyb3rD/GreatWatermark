@@ -1064,11 +1064,21 @@ p {
 
 .ui-slider-handle.ui-state-default.ui-corner-all {
   border-radius: 50px;
+  border: 1px solid #dbe1e8;
+  background-color: #fff;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
   width: 22px;
   height: 22px;
   top: -11px;
   outline: none;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.38);
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
 }
 .ui-slider-handle.ui-state-default.ui-corner-all:before {
   content: "";
@@ -1076,6 +1086,8 @@ p {
   width: 10px;
   height: 10px;
   border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
   background-color: #9eb2c0;
   top: 6px;
   left: 6px;
@@ -1088,6 +1100,8 @@ p {
   width: 10px;
   height: 10px;
   border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
   background: #f97e76;
   top: 6px;
   left: 6px;
@@ -1095,16 +1109,16 @@ p {
 }
 
 .ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active {
+.ui-widget-content.ui-state-active,
+.ui-widget-header.ui-state-active {
   border: 1px solid #f97e76;
   background: #dbe1e8;
   font-weight: normal;
   color: #ffffff;
 }
 .ui-state-active:hover,
-.ui-widget-content .ui-state-active:hover,
-.ui-widget-header .ui-state-active:hover {
+.ui-widget-content.ui-state-active:hover,
+.ui-widget-header.ui-state-active:hover {
   border: 1px solid #f97e76;
   background: #fff;
   font-weight: normal;
