@@ -868,7 +868,6 @@ p {
 }
 
 .control__position__title-wrapper {
-  border: 1px solid black;
   margin-bottom: 30px;
 }
 
@@ -880,18 +879,26 @@ p {
 }
 
 .control__position__tiling {
-  width: 30px;
-  height: 30px;
-  background: yellow;
+  width: 19px;
+  height: 19px;
+  background-image: url(../img/tiling.png);
   float: right;
+  cursor: pointer;
+}
+.control__position__tiling:hover {
+  background-image: url(../img/tiling-hover.png);
 }
 
 .control__position__ordinary {
-  width: 30px;
-  height: 30px;
-  background: red;
+  width: 19px;
+  height: 19px;
+  background-image: url(../img/ordinary.png);
   float: right;
   margin-right: 10px;
+  cursor: pointer;
+}
+.control__position__ordinary:hover {
+  background-image: url(../img/ordinary-hover.png);
 }
 
 .control__position__grid {
