@@ -655,6 +655,10 @@ p {
   margin: auto;
 }
 
+.canvas__img-wrapper {
+  font-size: 0;
+}
+
 * {
   font-family: SegoeUILight, sans-serif;
   color: #2e3641;
@@ -889,6 +893,10 @@ p {
   background-image: url(../img/tiling-hover.png);
 }
 
+.control__position__tiling-active {
+  background-image: url(../img/tiling-hover.png);
+}
+
 .control__position__ordinary {
   width: 19px;
   height: 19px;
@@ -898,6 +906,10 @@ p {
   cursor: pointer;
 }
 .control__position__ordinary:hover {
+  background-image: url(../img/ordinary-hover.png);
+}
+
+.control__position__ordinary-active {
   background-image: url(../img/ordinary-hover.png);
 }
 
