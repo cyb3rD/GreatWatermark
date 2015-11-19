@@ -29,9 +29,9 @@ $j = 0;
 
 if($tiling) {
     $new = $image->merge($watermark, 'left + 0', 'top + 0', 0);
-    while ($lengthY < $sizeImg[1]) {
+    while ($lengthY - $sizeWt[1] < $sizeImg[1]) {
         $lengthX = 0;
-        while ($lengthX < $sizeImg[0]) {
+        while ($lengthX - $sizeWt[0] < $sizeImg[0]) {
             $new = $new->merge($watermark, $deltaX * $koef+$lengthX, $deltaY * $koef+$lengthY, $opacity);
             $lengthX = $lengthX + $sizeWt[0] + $marginX;
         }
