@@ -41,9 +41,7 @@ var changePlace = (function () {
 		
 		restorePosDefault();
 		tiling = true;
-		$('.control__position__ordinary').removeClass('control__position__ordinary-active');
-		$('.control__position__tiling').addClass('control__position__tiling-active');
-
+		
 		$(".position__grid_item").removeClass('active');
 
 		watermark.css('margin', '0');
@@ -53,13 +51,17 @@ var changePlace = (function () {
 		lineHor = $('.line-hor');
 		lineVert = $('.line-vert');
 		lineHor.css('position', 'absolute');
-		lineHor.css('width', '100%');
-		lineHor.css('border', '1px solid red');
-		lineHor.css('top', gridHeight/2);
+		lineHor.css('width', grid.width());
+		lineHor.css('height', '0px');
+		lineHor.css('top', 0).css('right', 0).css('left', 0).css('bottom', 0).css('margin', 'auto');
+		lineHor.css('border-top', '1px solid red');
+		lineHor.css('border-bottom', '1px solid red');
 		lineVert.css('position', 'absolute');
-		lineVert.css('height', '100%');
-		lineVert.css('border', '1px solid red');
-		lineVert.css('left', gridWidth/2);
+		lineVert.css('height', grid.height());
+		lineVert.css('border-left', '1px solid red');
+		lineVert.css('border-right', '1px solid red');
+		lineVert.css('width', '0px');
+		lineVert.css('top', 0).css('right', 0).css('left', 0).css('bottom', 0).css('margin', 'auto');
 
 		watermarkWrap.width(watermark.width() * amountWidth + 10);
 		
@@ -140,13 +142,11 @@ var changePlace = (function () {
 			} else {
 				var lineVert = $('.line-vert'),
 					gridWidth = $('.control__position__grid').width(),
-					coord = parseInt(lineVert.css('left')) - 1,
-					borderLeftWidth = parseInt(lineVert.css('border-left-width')) + 1,
-					borderRightWidth = parseInt(lineVert.css('border-right-width')) + 1;
+					borderLeftWidth = parseInt(lineVert.css('border-left-width'))+1,
+					borderRightWidth = parseInt(lineVert.css('border-right-width'))+1;
 				if (gridWidth > borderLeftWidth + borderRightWidth) {
 					lineVert.css('border-left-width', borderLeftWidth + 'px');
 					lineVert.css('border-right-width', borderRightWidth + 'px');
-					lineVert.css('left', coord);
 					boxText.val(borderLeftWidth-1);
 					img.css('margin-bottom', borderLeftWidth-1 + 'px');
 				};
@@ -170,13 +170,11 @@ var changePlace = (function () {
 			} else {
 				var lineVert = $('.line-vert'),
 					gridWidth = $('.control__position__grid').width(),
-					coord = parseInt(lineVert.css('left')) + 1,
 					borderLeftWidth = parseInt(lineVert.css('border-left-width')) - 1,
 					borderRightWidth = parseInt(lineVert.css('border-right-width')) - 1;
 				if (borderLeftWidth + borderRightWidth > 1) {
 					lineVert.css('border-left-width', borderLeftWidth + 'px');
 					lineVert.css('border-right-width', borderRightWidth + 'px');
-					lineVert.css('left', coord);
 					boxText.val(borderLeftWidth-1);
 					img.css('margin-bottom', borderLeftWidth-1 + 'px');
 				};
@@ -207,13 +205,11 @@ var changePlace = (function () {
 					amountWidth = Math.ceil(mainImg.width() / watermark.width()),
 					watermarkWrapWidth = parseInt(watermarkWrap.width() + amountWidth),
 					gridWidth = $('.control__position__grid').width(),
-					coord = parseInt(lineHor.css('top')) - 1,
 					borderTopWidth = parseInt(lineHor.css('border-top-width')) + 1,
 					borderBottomWidth = parseInt(lineHor.css('border-bottom-width')) + 1;
 				if (gridWidth > borderTopWidth + borderBottomWidth) {
 					lineHor.css('border-top-width', borderTopWidth + 'px');
 					lineHor.css('border-bottom-width', borderBottomWidth + 'px');
-					lineHor.css('top', coord);
 					boxText.val(borderTopWidth-1);
 					watermarkWrap.width(watermarkWrapWidth + 'px');
 					img.css('margin-right', borderTopWidth-1 + 'px');
@@ -323,8 +319,6 @@ var changePlace = (function () {
 			_watermarkClonesKill();
 		}
 		tiling = false;
-		$('.control__position__tiling').removeClass('control__position__tiling-active');
-		$('.control__position__ordinary').addClass('control__position__ordinary-active');
 		img.css('top',0).css('left',0);
 		boxTextX.val('0');
 		boxTextY.val('0');
