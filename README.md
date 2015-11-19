@@ -3,7 +3,7 @@ Sample of great watermark service made by creative people from the heart and wit
 During collaboration in this project we learned basic Git teamworking skills & consolidate the skills gained on the
 Front-End Web Development Course @LoftSchool (09-2015).
 
-[Visit GreatWatermark Service](http://kleviibanshik.ru)
+[Visit GreatWatermark Service](http://kleviibanshik.ru) or [View GreatWatermark Service Presentation](http://cyb3rd.github.io/GreatWatermark/)
 ![alt text][main]
 [main]: http://cyb3rd.github.io/GreatWatermark/images/work-task.png "sample screen"
 
@@ -11,6 +11,7 @@ Front-End Web Development Course @LoftSchool (09-2015).
 * OpenSource
 * Intuitive interface
 * Quick & easy watermark creation
+* Single or Tiling mode
 
 
 ### Install instructions
@@ -63,8 +64,8 @@ Front-End Web Development Course @LoftSchool (09-2015).
 |Avatar   | Member          | Role               | GitHub Contacts                                      |
 |---------| --------------- |:------------------:| -----------------------------------------------------|
 |![alt text](http://cyb3rd.github.io/GreatWatermark/images/FeerAlex.jpg)| Alexander Feer  | `JavaScript, HTML` | [@FeerAlex](https://github.com/FeerAlex)             |
-|![alt text](http://cyb3rd.github.io/GreatWatermark/images/FeerAlex.jpg)| Varden Adamchuk | `JavaScript, HTML` | [@ivarden](https://github.com/ivarden)               |
-|![alt text](http://cyb3rd.github.io/GreatWatermark/images/FeerAlex.jpg)| Ivan Bunin      | `JavaScript, HTML` | [@chernobelenkiy](https://github.com/chernobelenkiy) |
-|![alt text](http://cyb3rd.github.io/GreatWatermark/images/FeerAlex.jpg)| Sergey Maraev   | `PHP, HTML`        | [@marsn72](http://https://github.com/marsn72)        |
-|![alt text](http://cyb3rd.github.io/GreatWatermark/images/FeerAlex.jpg)| Nikolay Ignatyev| `TeamLaed, HTML`   | [@cyb3rD](https://github.com/cyb3rD)                 |
+|![alt text](http://cyb3rd.github.io/GreatWatermark/images/Varden.jpg)| Varden Adamchuk | `JavaScript, HTML` | [@ivarden](https://github.com/ivarden)               |
+|![alt text](http://cyb3rd.github.io/GreatWatermark/images/IvanB.jpg)| Ivan Bunin      | `JavaScript, HTML` | [@chernobelenkiy](https://github.com/chernobelenkiy) |
+|![alt text](http://cyb3rd.github.io/GreatWatermark/images/Sergey.jpg)| Sergey Maraev   | `PHP, HTML`        | [@marsn72](http://https://github.com/marsn72)        |
+|![alt text](http://cyb3rd.github.io/GreatWatermark/images/Nikolay.jpg)| Nikolay Ignatyev| `TeamLaed, HTML`   | [@cyb3rD](https://github.com/cyb3rD)                 |
 
