@@ -1,9 +1,11 @@
 ### Foreword
 Sample of great watermark service made by creative people from the heart and with love!
 During collaboration in this project we learned basic Git teamworking skills & consolidate the skills gained on the
-Front-End Web Development Course.
+Front-End Web Development Course @LoftSchool (09-2015).
 
-[GreatWatermark Service](http://kleviibanshik.ru)
+[Visit GreatWatermark Service](http://kleviibanshik.ru)
+![alt text][logo]
+[logo]: http://cyb3rd.github.io/GreatWatermark/images/work-task.png
 
 ### Project features
 * OpenSource
@@ -17,6 +19,17 @@ Front-End Web Development Course.
 3. npm i
 4. bower i
 5. php composer.phar install
+
+### Basic instructions
+> Upload Image & Watermark.
+
+> Specify location & working mode (single/tile).
+
+> Apply opacity filter.
+
+> Download result or start from scratch.
+
+> Get the result.
 
 ### Folder structure
     .
@@ -33,4 +46,13 @@ Front-End Web Development Course.
     └── README.md               # This file
 
 
+### Our crew
+
+| Member          | Role               | GitHub Contacts                                      |
+| --------------- |:------------------:| -----------------------------------------------------|
+| Alexander Feer  | `JavaScript, HTML` | [@FeerAlex](https://github.com/FeerAlex)             |
+| Varden Adamchuk | `JavaScript, HTML` | [@ivarden](https://github.com/ivarden)               |
+| Ivan Bunin      | `JavaScript, HTML` | [@chernobelenkiy](https://github.com/chernobelenkiy) |
+| Sergey Maraev   | `PHP, HTML`        | [@marsn72](http://https://github.com/marsn72)        |
+| Nikolay Ignatyev| `TeamLaed, HTML`   | [@cyb3rD](https://github.com/cyb3rD)                 |
 
