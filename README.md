@@ -5,7 +5,7 @@ Front-End Web Development Course @LoftSchool (09-2015).
 
 [Visit GreatWatermark Service](http://kleviibanshik.ru)
 ![alt text][logo]
-[logo]: http://cyb3rd.github.io/GreatWatermark/images/work-task.png
+[logo]: http://cyb3rd.github.io/GreatWatermark/images/work-task.png "sample screen"
 
 ### Project features
 * OpenSource
@@ -22,13 +22,17 @@ Front-End Web Development Course @LoftSchool (09-2015).
 
 ### Basic instructions
 > Upload Image & Watermark.
-
+![alt text][logo]
+[logo]: http://cyb3rd.github.io/GreatWatermark/images/settings.png "upload images"
 > Specify location & working mode (single/tile).
-
+![alt text][logo]
+[logo]: http://cyb3rd.github.io/GreatWatermark/images/location.png "functions images"
 > Apply opacity filter.
-
+![alt text][logo]
+[logo]: http://cyb3rd.github.io/GreatWatermark/images/opacity.png "opacity filter"
 > Download result or start from scratch.
-
+![alt text][logo]
+[logo]: http://cyb3rd.github.io/GreatWatermark/images/download.png "get result"
 > Get the result.
 
 ### Folder structure
