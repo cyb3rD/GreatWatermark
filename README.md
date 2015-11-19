@@ -3,9 +3,12 @@ Sample of great watermark service made by creative people from the heart and wit
 During collaboration in this project we learned basic Git teamworking skills & consolidate the skills gained on the
 Front-End Web Development Course @LoftSchool (09-2015).
 
-[##Visit GreatWatermark Service](http://kleviibanshik.ru) or [##View GreatWatermark Service Presentation](http://cyb3rd.github.io/GreatWatermark/)
+[# Visit GreatWatermark Service](http://kleviibanshik.ru) or [# View GreatWatermark Service Presentation](http://cyb3rd.github.io/GreatWatermark/)
+
 ![alt text][main]
 [main]: http://cyb3rd.github.io/GreatWatermark/images/work-task.png "sample screen"
+
+[# Visit GreatWatermark Service](http://kleviibanshik.ru) or [# View GreatWatermark Service Presentation](http://cyb3rd.github.io/GreatWatermark/)
 
 ### Project features
 * OpenSource
