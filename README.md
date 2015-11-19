@@ -4,8 +4,8 @@ During collaboration in this project we learned basic Git teamworking skills & c
 Front-End Web Development Course @LoftSchool (09-2015).
 
 [Visit GreatWatermark Service](http://kleviibanshik.ru)
-![alt text][logo]
-[logo]: http://cyb3rd.github.io/GreatWatermark/images/work-task.png "sample screen"
+![alt text][main]
+[main]: http://cyb3rd.github.io/GreatWatermark/images/work-task.png "sample screen"
 
 ### Project features
 * OpenSource
@@ -22,17 +22,17 @@ Front-End Web Development Course @LoftSchool (09-2015).
 
 ### Basic instructions
 > Upload Image & Watermark.
-![alt text][logo]
-[logo]: http://cyb3rd.github.io/GreatWatermark/images/settings.png "upload images"
+![alt text][upload]
+[upload]: http://cyb3rd.github.io/GreatWatermark/images/settings.png "upload images"
 > Specify location & working mode (single/tile).
-![alt text][logo]
-[logo]: http://cyb3rd.github.io/GreatWatermark/images/location.png "functions images"
+![alt text][location]
+[location]: http://cyb3rd.github.io/GreatWatermark/images/location.png "functions images"
 > Apply opacity filter.
-![alt text][logo]
-[logo]: http://cyb3rd.github.io/GreatWatermark/images/opacity.png "opacity filter"
+![alt text][opacity]
+[opacity]: http://cyb3rd.github.io/GreatWatermark/images/opacity.png "opacity filter"
 > Download result or start from scratch.
-![alt text][logo]
-[logo]: http://cyb3rd.github.io/GreatWatermark/images/download.png "get result"
+![alt text][result]
+[result]: http://cyb3rd.github.io/GreatWatermark/images/download.png "get result"
 > Get the result.
 
 ### Folder structure
