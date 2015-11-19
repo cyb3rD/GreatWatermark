@@ -70,5 +70,5 @@ Front-End Web Development Course @LoftSchool (09-2015).
 |![alt text](http://cyb3rd.github.io/GreatWatermark/images/Varden.jpg)| Varden Adamchuk | `JavaScript, HTML` | [@ivarden](https://github.com/ivarden)               |
 |![alt text](http://cyb3rd.github.io/GreatWatermark/images/IvanB.jpg)| Ivan Bunin      | `JavaScript, HTML` | [@chernobelenkiy](https://github.com/chernobelenkiy) |
 |![alt text](http://cyb3rd.github.io/GreatWatermark/images/Sergey.jpg)| Sergey Maraev   | `PHP, HTML`        | [@marsn72](http://https://github.com/marsn72)        |
-|![alt text](http://cyb3rd.github.io/GreatWatermark/images/Nikolay.jpg)| Nikolay Ignatyev| `TeamLaed, HTML`   | [@cyb3rD](https://github.com/cyb3rD)                 |
+|![alt text](http://cyb3rd.github.io/GreatWatermark/images/Nikolay.jpg)| Nikolay Ignatyev| `TeamLead, HTML`   | [@cyb3rD](https://github.com/cyb3rD)                 |
 
