@@ -60,11 +60,11 @@ Front-End Web Development Course @LoftSchool (09-2015).
 
 ### Our crew
 
-| Member          | Role               | GitHub Contacts                                      |
-| --------------- |:------------------:| -----------------------------------------------------|
-| Alexander Feer  | `JavaScript, HTML` | [@FeerAlex](https://github.com/FeerAlex)             |
-| Varden Adamchuk | `JavaScript, HTML` | [@ivarden](https://github.com/ivarden)               |
-| Ivan Bunin      | `JavaScript, HTML` | [@chernobelenkiy](https://github.com/chernobelenkiy) |
-| Sergey Maraev   | `PHP, HTML`        | [@marsn72](http://https://github.com/marsn72)        |
-| Nikolay Ignatyev| `TeamLaed, HTML`   | [@cyb3rD](https://github.com/cyb3rD)                 |
+|Avatar   | Member          | Role               | GitHub Contacts                                      |
+|![alt text](http://cyb3rd.github.io/GreatWatermark/images/FeerAlex.jpg)| --------------- |:------------------:| -----------------------------------------------------|
+|| Alexander Feer  | `JavaScript, HTML` | [@FeerAlex](https://github.com/FeerAlex)             |
+|| Varden Adamchuk | `JavaScript, HTML` | [@ivarden](https://github.com/ivarden)               |
+|| Ivan Bunin      | `JavaScript, HTML` | [@chernobelenkiy](https://github.com/chernobelenkiy) |
+|| Sergey Maraev   | `PHP, HTML`        | [@marsn72](http://https://github.com/marsn72)        |
+|| Nikolay Ignatyev| `TeamLaed, HTML`   | [@cyb3rD](https://github.com/cyb3rD)                 |
 
