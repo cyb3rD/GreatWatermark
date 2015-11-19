@@ -17,13 +17,16 @@ var download = (function () {
 		e.preventDefault();
 		if (validation.checkfields()) {
 			var watermark = $('.canvas__img'), 
+				watermarkWrap = $('.canvas__img-wrapper'),
 				image = $('.canvas__main-img'),
-				cX = watermark.position().left,
-				cY = watermark.position().top,
+				cX = watermarkWrap.position().left,
+				cY = watermarkWrap.position().top,
+				tiling = changePlace.getTiling(),
+				marginX = watermark.css('margin-right'),
+				marginY = watermark.css('margin-bottom'),
 				k = watermark.attr('data-koef'), // вытаскиваем коэффициент ресайза
 				op = $( "#slider-opacity" ).slider( "value" ), // вытаскиваем прозрачность
-				data = {'opacity': op, 'deltaX': cX, 'deltaY': cY, 'image': image.attr('data-path'),'watermark': watermark.attr('data-path'), 'koef': k }; // задаём дата для отправки на бэк
-		
+				data = {'opacity': op, 'deltaX': cX, 'deltaY': cY, 'image': image.attr('data-path'),'watermark': watermark.attr('data-path'), 'koef': k, 'tiling': tiling, 'marginX': marginX, 'marginY': marginY }; // задаём дата для отправки на бэк
 
 		// Отправляем ajax запрос с данными для получения пути к результату
 		$.ajax({

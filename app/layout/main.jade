@@ -64,7 +64,12 @@ html(lang="Ru-ru")
                                           input(id="water_img_name" type="text" class="fileupload-input" name="filename" placeholder="Загрузите изображение" disabled lng="Placeholder")
 
                         .control__position-img
-                            .control__position__title(lng="Place") Положение
+                            .control__position__title-wrapper.clearfix  
+                                .control__position__title(lng="Place") Положение
+                                .control__position__tiling
+                                .control__position__ordinary
+
+
                             .control__position__grid.clearfix
                                 - var items = ['1','2','3','4','5','6','7','8','9']
                                 each item in items

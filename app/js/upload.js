@@ -33,13 +33,14 @@ var upload = (function() {
 				}
 				// Если до загрузки фона уже были вотермарки, удаляем
 				if ($(".canvas__img")) {
-					$(".canvas__img").remove();
-					opacity.reset();
+					changePlace.resetPos();
+					$('.canvas__img').remove();
 					$("#water_img_name").val('');
 				}
 				filename.val(name); // Задаём в инпут имя файла
 				canvas.append(main_img);  
 				main_img = $(".canvas__main-img");
+				main_img.append("<div class='canvas__img-wrapper'></div>");
 				kw = props.width / canvas.width(); // Считаем ширину
 				kh = props.height / canvas.height(); // и высоту 
 				if (kw > kh) { // Выбираем больший коэффициент
@@ -77,6 +78,7 @@ var upload = (function() {
 
 	var _addWaterMark = function(props, k) {
 		var water_img = '<div class="canvas__img upload-img"></div>',
+			watermarkWrap = $(".canvas__img-wrapper"),
 			k = k,
 			canvas = $("#canvas"),
 			main_img = $(".canvas__main-img"),
@@ -85,13 +87,17 @@ var upload = (function() {
 			name = props.fileName;
 
 		// Если до загрузки вотермарка уже были вотермарки, удаляем
+		watermarkWrap.draggable({	// Делаем его "дрэггэбл"
+		   containment: "parent"
+		});
+		watermarkWrap.css("position", "absolute");
 		if ($(".canvas__img")) {
-			$(".canvas__img").remove();
-			opacity.reset();
+			changePlace.resetPos();
+			$('.canvas__img').remove();
 		}
 
 		filename.val(name);					 
-		main_img.append(water_img);
+		watermarkWrap.append(water_img); // Запираем вотермарк в обёртке
 		water_img = $(".canvas__img");
 		water_img.attr('data-path', props.path);
 		water_img.attr('data-koef', k);
@@ -99,11 +105,8 @@ var upload = (function() {
 		water_img.css("width", props.width / k + "px");
 		water_img.css("height", props.height / k + "px");
 		water_img.css("background-size", "100%");
-		main_img.append(water_img);  // Запираем вотермарк в фоновом изображении
-		$('.upload-img').draggable({	// Делаем его "дрэггэбл"
-		   containment:'parent'	// Запираем дрэг в родительском элементе
-		});
-		changePlace.init(); // Инициализируем модуль 
+		changePlace.startListen();
+ 
 	}
 	// Возвращаем объект (публичные методы)
 	return {

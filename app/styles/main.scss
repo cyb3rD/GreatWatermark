@@ -73,9 +73,6 @@
 }
 /* _____________ // file upload end _________ */
 
-.canvas__img {
-  position:absolute;
-}
 .canvas__main-img {
   position:relative;
   top:0;
@@ -288,11 +285,28 @@
   -ms-user-select: none;
   user-select: none;
 }
-.control__position__title {
+.control__position__title-wrapper {
+  border:1px solid black;
   margin-bottom: 30px;
-  text-align: center;
+}
+.control__position__title {
+  vertical-align:middle;
   max-height: 16px;
   overflow: hidden;
+  float:left
+}
+.control__position__tiling {
+  width:30px;
+  height:30px;
+  background:yellow;
+  float:right;
+}
+.control__position__ordinary {
+  width:30px;
+  height:30px;
+  background:red;
+  float:right;
+  margin-right:10px;
 }
 .control__position__grid {
   //float: left;
