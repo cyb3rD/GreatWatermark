@@ -484,13 +484,12 @@ header h2 {
 }
 
 #content-wrapper {
-  padding-top: 30px;
   border-top: solid 1px #fff;
 }
 
 #main-content {
   float: left;
-  width: 690px;
+  width: 840px;
 }
 
 #main-content img {
@@ -774,20 +773,66 @@ li {
   list-style: none;
 }
 
-
+/* custom styles for current project */
 .coder {
   background-image: url('../images/cat-coder.png') ;
 }
-
+.coder-info {
+  display: inline-block;
+  max-width: 160px;
+  vertical-align: top;
+}
+.about-coder {
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #474747;
+}
+.project-role {
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #474747;
+}
 .gh-user {
-  margin-left: 0px;
-  padding-left: 35px;
-  padding-top: 20px;
-  background-repeat: no-repeat;
-  background-position: 0px center;
+  width: 123px;
+  height: 123px;
+  border-radius: 50% 50%;
+  overflow: hidden;
+  border: 5px solid #3078cc;
+}
+.download-links {
+  display: block;
+  width: 138px;
+  padding-left: 64px;
+  margin-bottom: 20px;
+  font-size: 21px;
+  background: transparent url(../images/download-button.png) 0 0 no-repeat;
+}
+.project-contaier {
+  width: 840px;
+  text-align: center;
 }
 
-
+.project-link {
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.screen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 800px;
+  border: 5px solid #3078cc;
+  border-radius: 5px;
+}
+.screen.manual {
+  max-width: 250px !important;
+  margin-bottom: 20px;
+}
 /* #Media Queries
 ================================================== */
 
