@@ -22,17 +22,25 @@ Front-End Web Development Course @LoftSchool (09-2015).
 
 ### Basic instructions
 > Upload Image & Watermark.
+
 ![alt text][upload]
 [upload]: http://cyb3rd.github.io/GreatWatermark/images/settings.png "upload images"
+
 > Specify location & working mode (single/tile).
+
 ![alt text][location]
 [location]: http://cyb3rd.github.io/GreatWatermark/images/location.png "functions images"
+
 > Apply opacity filter.
+
 ![alt text][opacity]
 [opacity]: http://cyb3rd.github.io/GreatWatermark/images/opacity.png "opacity filter"
+
 > Download result or start from scratch.
+
 ![alt text][result]
 [result]: http://cyb3rd.github.io/GreatWatermark/images/download.png "get result"
+
 > Get the result.
 
 ### Folder structure
