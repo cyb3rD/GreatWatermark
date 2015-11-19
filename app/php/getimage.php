@@ -19,10 +19,10 @@ $sizeWt = getimagesize($_POST['watermark']);
 
 
 
-$marginX = $_POST['marginX'];
-$marginY = $_POST['marginY'];
-$lengthX = $marginY;
-$lengthY = $marginX;
+$marginX = $_POST['marginX']*$koef;
+$marginY = $_POST['marginY']*$koef;
+$lengthX = 0;
+$lengthY = 0;
 $i = 0;
 $j = 0;
 
@@ -30,12 +30,12 @@ $j = 0;
 if($tiling) {
     $new = $image->merge($watermark, 'left + 0', 'top + 0', 0);
     while ($lengthY < $sizeImg[1]) {
-        $lengthX = $marginX;
+        $lengthX = 0;
         while ($lengthX < $sizeImg[0]) {
-            $new = $new->merge($watermark, $lengthX, $lengthY, $opacity);
-            $lengthX = $lengthX + $sizeWt[0] + $marginX * $koef;
+            $new = $new->merge($watermark, $deltaX * $koef+$lengthX, $deltaY * $koef+$lengthY, $opacity);
+            $lengthX = $lengthX + $sizeWt[0] + $marginX;
         }
-        $lengthY = $lengthY + $sizeWt[1] + $marginY * $koef;
+        $lengthY = $lengthY + $sizeWt[1] + $marginY;
     }
     $new -> saveToFile($result);
 } else {
