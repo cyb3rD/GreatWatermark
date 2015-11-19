@@ -32,10 +32,10 @@ if($tiling) {
     while ($lengthY < $sizeImg[1]) {
         $lengthX = $marginX;
         while ($lengthX < $sizeImg[0]) {
-            $new = $new->merge($watermark, 'left  + ' . $lengthX, 'top  +' . $lengthY, $opacity);
-            $lengthX = $lengthX + $sizeWt[0] + $marginX;
+            $new = $new->merge($watermark, $deltaX * $koef + $lengthX, $deltaY * $koef + $lengthY, $opacity);
+            $lengthX = $lengthX + $sizeWt[0] + $marginX * $koef;
         }
-        $lengthY = $lengthY + $sizeWt[1] + $marginY;
+        $lengthY = $lengthY + $sizeWt[1] + $marginY * $koef;
     }
     $new -> saveToFile($result);
 } else {
