@@ -42,6 +42,9 @@ var changePlace = (function () {
 		restorePosDefault();
 		tiling = true;
 		
+		$('.control__position__ordinary').removeClass('control__position__ordinary-active');
+		$('.control__position__tiling').addClass('control__position__tiling-active');
+
 		$(".position__grid_item").removeClass('active');
 
 		watermark.css('margin', '0');
@@ -322,6 +325,8 @@ var changePlace = (function () {
 		img.css('top',0).css('left',0);
 		boxTextX.val('0');
 		boxTextY.val('0');
+		$('.control__position__tiling').removeClass('control__position__tiling-active');
+		$('.control__position__ordinary').addClass('control__position__ordinary-active');
 		$(".position__grid_item").removeClass('active');
 		$("#1").addClass('active');
 		$("#parent-img")[0].reset();
